@@ -971,7 +971,20 @@ footer h3 {
   margin: 0 auto 18px;
   display: block;
   object-fit: cover;
+  object-position: center center;
   border-radius: 50%;
   border: 3px solid #f5b719;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
+
+/* Mobile photo fix */
+@media (max-width: 520px) {
+  .member-photo {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    object-position: center center;
+    margin: 0 auto 15px;
+  }
+}
+
