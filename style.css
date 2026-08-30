@@ -987,4 +987,77 @@ footer h3 {
     margin: 0 auto 15px;
   }
 }
+/* ==============================
+   SOCIAL ACTIVITIES
+   ============================== */
 
+.social-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.social-text h3 {
+  color: #f5b719;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.social-text p {
+  color: #c9d5df;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.social-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.social-points div {
+  padding: 22px;
+  border: 1px solid #41627a;
+  border-radius: 12px;
+  background: #0b3552;
+}
+
+.social-points span {
+  font-size: 32px;
+}
+
+.social-points h3 {
+  color: #f5b719;
+  margin: 8px 0;
+}
+
+.social-points p {
+  color: #c9d5df;
+  margin: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .social-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .social-points {
+    grid-template-columns: 1fr;
+  }
+
+  .social-text p {
+    font-size: 16px;
+  }
+
+}
