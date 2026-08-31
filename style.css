@@ -1180,5 +1180,90 @@ footer {
   object-position: center;
   display: block;
 }
+/* =========================
+   INCREASE WEBSITE FONT SIZE
+========================= */
 
+body {
+  font-size: 18px;
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+nav a {
+  font-size: 18px;
+}
+
+.eyebrow {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hero-marathi {
+  font-size: 26px;
+}
+
+.meta {
+  font-size: 19px;
+}
+
+.btn,
+.dark-btn {
+  font-size: 18px;
+}
+
+.facts b {
+  font-size: 24px;
+}
+
+.facts small {
+  font-size: 17px;
+}
+
+.values b {
+  font-size: 23px;
+}
+
+.values span {
+  font-size: 18px;
+}
+
+.social-card-content h3 {
+  font-size: 25px;
+}
+
+.social-card-content p {
+  font-size: 19px;
+}
+
+.gallery-description p {
+  font-size: 19px;
+}
+
+.contact-grid h3 {
+  font-size: 24px;
+}
+
+.contact-grid p {
+  font-size: 18px;
+}
+
+footer {
+  font-size: 18px;
+}
 
