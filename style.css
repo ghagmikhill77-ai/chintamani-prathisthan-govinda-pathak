@@ -1,913 +1,639 @@
-<!DOCTYPE html>
-
-<html lang="mr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>चिंतामणी प्रतिष्ठान | चिंचपोकळी</title>
-
-<meta
-name="description"
-content="चिंतामणी प्रतिष्ठान, चिंचपोकळी — स्थापना २०११. एकता, शिस्त, परंपरा आणि जिद्द."
-
->
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header class="navbar">
-
-  <a class="brand" href="#home">
-    <img src="logo.jpeg" alt="चिंतामणी प्रतिष्ठान लोगो">
-
-```
-<div>
-  <strong>चिंतामणी प्रतिष्ठान</strong>
-  <span></span>
-</div>
-```
-
-  </a>
-
-<button class="menu" aria-label="मेनू">☰</button>
-
-  <nav>
-    <a href="#home">मुख्यपृष्ठ</a>
-    <a href="#about">आमच्याबद्दल</a>
-    <a href="#team">आमचे पथक</a>
-    <a href="#achievements">यशोगाथा</a>
-    <a href="#gallery">गॅलरी</a>
-    <a href="#social">सामाजिक</a>
-    <a href="#social">कला</a>
-    <a href="#social">शैक्षणिक</a>
-    <a href="#events">उपक्रम</a>
-    <a href="#sponsors">प्रायोजक</a>
-    <a href="#contact">संपर्क</a>
-  </nav>
-
-</header>
-
-<main>
-
-<!-- =========================
-     HOME
-========================= -->
-
-<section id="home" class="hero">
-
-  <div class="hero-image"></div>
-  <div class="hero-shade"></div>
-
-  <div class="hero-content">
-
-```
-<p class="eyebrow">
-  एकता | शिस्त | परंपरा | जिद्द
-</p>
-
-<img
-  class="hero-logo"
-  src="assets/logo.jpeg"
-  alt="चिंतामणी प्रतिष्ठान"
->
-
-<h1>चिंतामणी प्रतिष्ठान</h1>
-
-<div class="meta">
-  <span>📍 चिंचपोकळी</span>
-  <i></i>
-  <span>🗓️ स्थापना २०११</span>
-</div>
-
-<p class="hero-marathi">
-  गोविंदा आला रे आला...<br>
-  ८ थरवाले
-</p>
-
-<div class="buttons">
-  <a class="btn primary" href="#about">
-    आमचा प्रवास →
-  </a>
-
-  <a class="btn secondary" href="#contact">
-    संपर्क करा
-  </a>
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- =========================
-     INTRO
-========================= -->
-
-<section class="intro">
-
-  <div class="intro-copy">
-
-```
-<p class="eyebrow">आमच्याबद्दल</p>
-
-<h2>
-  चिंतामणी प्रतिष्ठान<br>
-  गोविंदा पथक
-</h2>
-
-<p>
-  चिंचपोकळी येथे २०११ साली स्थापन झालेले चिंतामणी प्रतिष्ठान गोविंदा
-  पथक आज महाराष्ट्रातील सर्वांत यशस्वी गोविंदा पथकांपैकी एक मानले जाते.
-  दहीहंडीच्या उत्सवातून संघभावना, शिस्त आणि परंपरा जपतानाच हे पथक
-  समाजसेवेच्या कार्यातही सक्रिय आहे.
-</p>
-
-<p>
-  सरावापासून दहीहंडीच्या उत्सवापर्यंत प्रत्येक सदस्याची मेहनत,
-  जिद्द आणि एकजुटीची ही कहाणी आहे. आमचे पथक समाजाचा अभिन्न भाग
-  बनून विविध सामाजिक उपक्रम राबवत आहे.
-</p>
-
-<div class="facts">
-
-  <div>
-    <b>२०११</b>
-    <small>स्थापना</small>
-  </div>
-
-  <div>
-    <b>चिंचपोकळी</b>
-    <small>ठिकाण</small>
-  </div>
-
-  <div>
-    <b>नरेश तोरस्कर</b>
-    <small>संस्थापक व अध्यक्ष</small>
-  </div>
-
-  <div>
-    <b>संतोष राऊत</b>
-    <small>उपाध्यक्ष</small>
-  </div>
-
-  <div>
-    <b>गौरव खणकर</b>
-    <small>गोविंदा पथकप्रमुख</small>
-  </div>
-
-</div>
-
-<a class="dark-btn" href="#about">
-  अधिक जाणून घ्या →
-</a>
-```
-
-  </div>
-
-  <div class="quote-card">
-
-```
-<img
-  src="assets/hero-pyramid.jpeg"
-  alt="गोविंदा पथकाची मानवी मनोरा रचना"
->
-
-<div class="quote-overlay">
-  "एकता आमची ताकद<br>
-  परंपरा आमची ओळख<br>
-  जिद्द आमची शान!"
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section id="about" class="section about dark">
-
-  <p class="eyebrow">आमचा प्रवास</p>
-
-  <h2>परंपरेसोबत प्रगतीची वाटचाल</h2>
-
-  <div class="two-col">
-
-```
-<div>
-
-  <h3>आमची ओळख</h3>
-
-  <p>
-    २०११ पासून चिंचपोकळीच्या मातीतून चिंतामणी प्रतिष्ठान
-    गोविंदा पथकाने अनेक उत्सवांना रंग दिले आहे.
-  </p>
-
-  <p>
-    दहीहंडी हा केवळ उत्सव नसून संघभावना, विश्वास, परिश्रम
-    आणि एकमेकांना साहाय्य करण्याचा संदेश आहे.
-  </p>
-
-</div>
-
-
-<div class="values">
-
-  <div>
-    <b>एकता</b>
-    <span>एकत्र येऊन उंच भरारी</span>
-  </div>
-
-  <div>
-    <b>शिस्त</b>
-    <span>सराव आणि सुरक्षिततेला प्राधान्य</span>
-  </div>
-
-  <div>
-    <b>परंपरा</b>
-    <span>महाराष्ट्राची संस्कृती जपणे</span>
-  </div>
-
-  <div>
-    <b>जिद्द</b>
-    <span>प्रत्येक आव्हानाला सामोरे जाणे</span>
-  </div>
-
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- =========================
-     TEAM
-========================= -->
-
-<section id="team" class="section">
-
-  <p class="eyebrow">आमचे पथक</p>
-
-  <h2>नेतृत्व</h2>
-
-  <div class="cards">
-
-```
-<article class="card">
-
-  <img
-    class="member-photo"
-    src="nt.jpeg"
-    alt="नरेश तोरस्कर"
-  >
-
-  <h3>नरेश तोरस्कर</h3>
-
-  <p>संस्थापक व अध्यक्ष</p>
-
-</article>
-
-
-<article class="card">
-
-  <img
-    class="member-photo"
-    src="sr.jpeg"
-    alt="संतोष राऊत"
-  >
-
-  <h3>संतोष राऊत</h3>
-
-  <p>उपाध्यक्ष</p>
-
-</article>
-```
-
-  </div>
-
-  <p class="note">
-    लवकरच पथकातील इतर सदस्यांची माहिती येथे जोडली जाईल.
-  </p>
-
-</section>
-
-<!-- =========================
-     ACHIEVEMENTS
-========================= -->
-
-<section id="achievements" class="section dark">
-
-  <p class="eyebrow">यशोगाथा</p>
-
-  <h2>आमची कामगिरी</h2>
-
-  <div class="empty-grid">
-
-```
-<div class="placeholder">
-  🏆
-  <h3>उपलब्धी लवकरच</h3>
-  <p>
-    दहीहंडी स्पर्धा, क्रमांक आणि पुरस्कारांची माहिती येथे जोडली जाईल.
-  </p>
-</div>
-
-<div class="placeholder">
-  🥇
-  <h3>स्मरणीय क्षण</h3>
-  <p>
-    पथकाच्या विशेष कामगिरीचे क्षण येथे प्रदर्शित करता येतील.
-  </p>
-</div>
-
-<div class="placeholder">
-  📜
-  <h3>सन्मान</h3>
-  <p>
-    प्रमाणपत्रे आणि गौरवांची माहिती येथे जोडता येईल.
-  </p>
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- =========================
-     GALLERY
-========================= -->
-
-<section id="gallery" class="section">
-
-  <p class="eyebrow">चिंतामणी सेवा</p>
-
-  <h2>चिंतामणी सेवा</h2>
-
-  <div class="gallery">
-
-```
-<div class="gallery-item">
-  <img
-    src="tarafa.jpeg"
-    alt="चिंतामणी प्रतिष्ठान गोविंदा पथक तराफा"
-  >
-</div>
-
-<div class="gallery-item">
-  <img
-    src="tarafa1.jpeg"
-    alt="चिंतामणी प्रतिष्ठान गोविंदा पथक तराफा १"
-  >
-</div>
-
-<div class="gallery-item">
-  <img
-    src="tarafa2.jpeg"
-    alt="चिंतामणी प्रतिष्ठान गोविंदा पथक तराफा २"
-  >
-</div>
-
-<div class="gallery-item">
-  <img
-    src="tarafa3.jpeg"
-    alt="चिंतामणी प्रतिष्ठान गोविंदा पथक तराफा ३"
-  >
-</div>
-```
-
-  </div>
-
-  <div class="gallery-description">
-
-```
-<p>
-  खेळण्या, बागडण्याचा वयात चिंचपोकळीचा चिंतामणीला तराफा अर्पण
-  करणारं चिंचपोकळीतील एकमेव गोविंदा पथक म्हणजेच चिंतामणी प्रतिष्ठान
-  गोविंदा पथक.
-</p>
-
-<p>
-  २०१५ या वर्षाआधीपर्यंत होणाऱ्या विसर्जनाला चिंतामणीच्या मूर्तीची
-  विटंबना पाहता हे पाऊल चिंतामणी प्रतिष्ठान यांनी चिंतामणी प्रतिष्ठान
-  गोविंदा पथकाच्या सहकार्याने २०१५ साली उचलले होते आणि यशस्वीरीत्या
-  पार पाडले.
-</p>
-```
-
-  </div>
-
-</section>
-
-<!-- =========================
-     EVENTS
-========================= -->
-
-<section id="events" class="section dark">
-
-  <p class="eyebrow">उपक्रम</p>
-
-  <h2>आगामी कार्यक्रम</h2>
-
-  <div class="event-box">
-
-```
-<h3>दहीहंडी २०२६</h3>
-
-<p>
-  तारीख, वेळ आणि ठिकाणाची माहिती लवकरच जाहीर केली जाईल.
-</p>
-```
-
-  </div>
-
-</section>
-
-<!-- =========================
-     SOCIAL ACTIVITIES
-========================= -->
-
-<section id="social" class="section">
-
-  <p class="eyebrow">सामाजिक</p>
-
-  <h2>सामाजिक उपक्रम</h2>
-
-  <div class="social-gallery" style="display:flex; flex-direction:column; gap:40px; width:100%;">
-
-```
-<!-- =====================
-     BLOOD DONATION
-====================== -->
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <img
-    src="samajik.jpeg"
-    alt="चिंतामणी प्रतिष्ठान रक्तदान शिबीर"
-  >
-
-  <div class="social-card-content">
-
-    <h3>रक्तदान शिबीर</h3>
-
-    <p>
-      थरावर जसे आधार देतो, तसा समाजाला रक्ताचा आधार.
-    </p>
-
-  </div>
-
-</div>
-
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <img
-    src="samajik1.jpeg"
-    alt="चिंतामणी प्रतिष्ठान सामाजिक उपक्रम"
-  >
-
-  <div class="social-card-content">
-
-    <h3>सामाजिक बांधिलकी</h3>
-
-    <p>
-      समाजासाठी योगदान देण्याची चिंतामणी प्रतिष्ठानची
-      सातत्यपूर्ण परंपरा.
-    </p>
-
-  </div>
-
-</div>
-
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <img
-    src="samajik2.jpeg"
-    alt="चिंतामणी प्रतिष्ठान सामाजिक सेवा"
-  >
-
-  <div class="social-card-content">
-
-    <h3>समाजसेवा</h3>
-
-    <p>
-      एकता, सहकार्य आणि समाजहिताची भावना जपण्याचा प्रयत्न.
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- =====================
-     ENVIRONMENT
-====================== -->
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <div class="activity-images" style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; align-items:stretch;">
-
-    <img
-      src="tr.jpeg"
-      alt="हिरवा निसर्ग आपली जबाबदारी"
-    >
-
-    <img
-      src="tr1.jpeg"
-      alt="पर्यावरण संवर्धन"
-    >
-
-    <img
-      src="tr2.jpeg"
-      alt="पर्यावरण संवर्धन उपक्रम"
-    >
-
-    <img
-      src="tr3.jpeg"
-      alt="हिरवा निसर्ग"
-    >
-
-  </div>
-
-  <div class="social-card-content">
-
-    <h3>हिरवा निसर्ग, आपली जबाबदारी</h3>
-
-    <p>
-      हिरवा निसर्ग, आपली जबाबदारी.
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- =====================
-     FOOD DONATION
-====================== -->
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <div class="activity-images" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:stretch;">
-
-    <img
-      src="eq1.jpeg"
-      alt="चिंतामणी प्रतिष्ठान अन्नदान सेवा"
-    >
-
-    <img
-      src="eq2.jpeg"
-      alt="टाटा रुग्णालयाजवळ अन्नदान सेवा"
-    >
-
-    <img
-      src="eq3.jpeg"
-      alt="चिंतामणी प्रतिष्ठान गोविंदा पथक अन्नदान सेवा"
-    >
-
-  </div>
-
-  <div class="social-card-content">
-
-    <h3>मायेचा घास</h3>
-
-    <p>
-      रुग्णांच्या नातेवाईकांसाठी मायेचा घास -
-      टाटा रुग्णालयाजवळ अन्नदान सेवा,
-      चिंतामणी प्रतिष्ठान गोविंदा पथक.
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- =====================
-     EYE CHECKUP CAMP
-====================== -->
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <div class="activity-images" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:stretch;">
-
-    <img
-      src="eye.jpeg"
-      alt="मोफत नेत्र तपासणी शिबिर"
-    >
-
-    <img
-      src="eye1.jpeg"
-      alt="मोफत नेत्र तपासणी शिबिर"
-    >
-
-    <img
-      src="eye2.jpeg"
-      alt="मोफत नेत्र तपासणी शिबिर"
-    >
-
-  </div>
-
-  <div class="social-card-content">
-
-    <h3>दृष्टी हीच सृष्टी</h3>
-
-    <p>
-      दृष्टी हीच सृष्टी - मोफत नेत्र तपासणी शिबिर,
-      चिंतामणी प्रतिष्ठान गोविंदा पथक.
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- =====================
-     ORPHANAGE SERVICE
-====================== -->
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <div class="activity-images" style="display:grid; grid-template-columns:repeat(5,1fr); gap:16px; align-items:stretch;">
-
-    <img
-      src="ka.jpeg"
-      alt="अनाथ आश्रमातील मदत"
-    >
-
-    <img
-      src="ka1.jpeg"
-      alt="अनाथ आश्रमातील मदत"
-    >
-
-    <img
-      src="ka2.jpeg"
-      alt="अनाथ आश्रमातील मदत"
-    >
-
-    <img
-      src="ka3.jpeg"
-      alt="अनाथ आश्रमातील मदत"
-    >
-
-    <img
-      src="ka4.jpeg"
-      alt="अनाथ आश्रमातील मदत"
-    >
-
-  </div>
-
-  <div class="social-card-content">
-
-    <h3>सेवा हीच खरी भक्ती</h3>
-
-    <p>
-      सेवा हीच खरी भक्ती. चिंतामणीच्या कृपेने अनाथ आश्रमात
-      केलेली छोटीशी मदत.
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- =====================
-     BEACH CLEANUP
-====================== -->
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <div class="activity-images" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:stretch;">
-
-    <img
-      src="b.jpeg"
-      alt="बीच स्वच्छता अभियान"
-    >
-
-    <img
-      src="b1.jpeg"
-      alt="बीच स्वच्छता अभियान"
-    >
-
-    <img
-      src="b2.jpeg"
-      alt="बीच स्वच्छता अभियान"
-    >
-
-  </div>
-
-  <div class="social-card-content">
-
-    <h3>समुद्रकिनारा आपला, स्वच्छता आपली जबाबदारी</h3>
-
-    <p>
-      समुद्रकिनारा आपला, स्वच्छता आपली जबाबदारी - बीच स्वच्छता अभियान,
-      चिंतामणी प्रतिष्ठान.
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- =====================
-     WHEEL CHAIR DISTRIBUTION
-====================== -->
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <div class="activity-images" style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; align-items:stretch;">
-
-    <img
-      src="ad.jpeg"
-      alt="दिव्यांग बांधवांना मोफत व्हील चेअर वाटप"
-    >
-
-    <img
-      src="ad1.jpeg"
-      alt="दिव्यांग बांधवांना मोफत व्हील चेअर वाटप"
-    >
-
-    <img
-      src="ad2.jpeg"
-      alt="दिव्यांग बांधवांना मोफत व्हील चेअर वाटप"
-    >
-
-    <img
-      src="ad3.jpeg"
-      alt="दिव्यांग बांधवांना मोफत व्हील चेअर वाटप"
-    >
-
-  </div>
-
-  <div class="social-card-content">
-
-    <h3>सेवेचे पाऊल, आधाराचे हात</h3>
-
-    <p>
-      सेवेचे पाऊल, आधाराचे हात - दिव्यांग बांधवांना मोफत व्हील चेअर वाटप,
-      चिंतामणी प्रतिष्ठान गोविंदा पथक.
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- =====================
-     KABADDI TEAM
-====================== -->
-
-<div class="social-card" style="width:100%; box-sizing:border-box;">
-
-  <div class="activity-images" style="display:grid; grid-template-columns:repeat(6,1fr); gap:16px; align-items:stretch;">
-
-    <img src="cp.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-    <img src="cp2.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-    <img src="cp3.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-    <img src="c4.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-    <img src="cp5.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-    <img src="cp6.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-
-  </div>
-
-  <div class="social-card-content">
-
-    <h3>मातीतली ताकद, मैदानातला दरारा</h3>
-
-    <p>
-      मातीतली ताकद, मैदानातला दरारा - चिंतामणी प्रतिष्ठान कबड्डी संघ.
-    </p>
-
-  </div>
-
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- =========================
-     SPONSORS
-========================= -->
-
-<section id="sponsors" class="section">
-
-  <p class="eyebrow">सहकार्य</p>
-
-  <h2>आमचे प्रायोजक</h2>
-
-  <p class="center">
-    प्रायोजकांचे लोगो आणि माहिती येथे प्रदर्शित करता येईल.
-  </p>
-
-</section>
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section id="contact" class="section contact dark">
-
-  <p class="eyebrow">संपर्क</p>
-
-  <h2>चिंतामणी प्रतिष्ठानशी संपर्क साधा</h2>
-
-  <div class="contact-grid">
-
-```
-<div>
-
-  <h3>📍 ठिकाण</h3>
-
-  <p>
-    अ/११, अष्टविनायक इमारत, दत्ताराम लाड मार्ग,
-    चिंचपोकळी मुंबई ४०००७०
-  </p>
-
-</div>
-
-
-<div>
-
-  <h3>✉️ ई-मेल</h3>
-
-  <p>
-    <a href="mailto:chintamaniprathisthan8@gmail.com">
-      chintamaniprathisthan8@gmail.com
-    </a>
-  </p>
-
-</div>
-
-
-<div>
-
-  <h3>📞 मोबाईल</h3>
-
-  <p>७७१०९००४५०</p>
-
-</div>
-```
-
-  </div>
-
-</section>
-
-</main>
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-<img
-src="logo.jpeg"
-alt="चिंतामणी प्रतिष्ठान लोगो"
-
->
-
-  <h3>चिंतामणी प्रतिष्ठान</h3>
-
-  <p>
-    चिंचपोकळी • स्थापना २०११
-  </p>
-
-  <p>
-    © २०२६ चिंतामणी प्रतिष्ठान. सर्व हक्क राखीव.
-  </p>
-
-</footer>
-
-<!-- =========================
-     MENU SCRIPT
-========================= -->
-
-<script>
-
-const menu = document.querySelector('.menu');
-const nav = document.querySelector('nav');
-
-menu.addEventListener('click', () => {
-  nav.classList.toggle('open');
-});
-
-document.querySelectorAll('nav a').forEach(a => {
-
-  a.addEventListener('click', () => {
-    nav.classList.remove('open');
-  });
-
-});
-
-</script>
-
-</body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap');
+
+/* =========================
+   RESET
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Noto Sans Devanagari',sans-serif;
+font-size:18px;
+line-height:1.8;
+color:#222;
+
+background:url("cp8.jpeg") center/cover fixed no-repeat;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:999;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:14px 5%;
+
+background:rgba(0,0,0,.88);
+backdrop-filter:blur(8px);
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:white;
+}
+
+.brand img{
+width:58px;
+height:58px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.brand strong{
+font-size:24px;
+font-weight:800;
+}
+
+nav{
+display:flex;
+gap:22px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ffd54f;
+}
+
+.menu{
+display:none;
+background:none;
+border:none;
+color:white;
+font-size:30px;
+cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+position:relative;
+height:92vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero-image{
+position:absolute;
+inset:0;
+background:url("cp8.jpeg") center/cover;
+}
+
+.hero-shade{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+max-width:900px;
+padding:20px;
+}
+
+.hero-logo{
+width:150px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:58px;
+font-weight:900;
+line-height:1.2;
+}
+
+.hero h1 span{
+display:block;
+}
+
+.hero-marathi{
+font-size:28px;
+font-weight:700;
+margin:25px 0;
+}
+
+.meta{
+display:flex;
+justify-content:center;
+gap:18px;
+font-size:20px;
+margin-top:18px;
+}
+
+.buttons{
+margin-top:28px;
+display:flex;
+justify-content:center;
+gap:18px;
+}
+
+.btn{
+padding:13px 28px;
+border-radius:8px;
+text-decoration:none;
+font-size:18px;
+font-weight:700;
+transition:.3s;
+}
+
+.primary{
+background:#ffd54f;
+color:black;
+}
+
+.secondary{
+border:2px solid white;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.section,
+.intro{
+padding:90px 7%;
+background:rgba(255,255,255,.94);
+}
+
+.dark{
+background:rgba(0,0,0,.88);
+color:white;
+}
+
+.eyebrow{
+font-size:22px;
+font-weight:700;
+margin-bottom:10px;
+color:#c98900;
+}
+
+h2{
+font-size:44px;
+font-weight:900;
+margin-bottom:28px;
+}
+
+h3{
+font-size:28px;
+margin-bottom:12px;
+}
+
+p{
+font-size:19px;
+margin-bottom:16px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.facts{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+margin:25px 0;
+}
+
+.facts div{
+background:#fff3d6;
+padding:18px;
+border-radius:12px;
+text-align:center;
+}
+
+.facts b{
+font-size:24px;
+display:block;
+}
+
+.dark-btn{
+display:inline-block;
+background:black;
+color:white;
+padding:12px 24px;
+border-radius:8px;
+text-decoration:none;
+}
+
+/* =========================
+   QUOTE CARD
+========================= */
+
+.quote-card{
+position:relative;
+border-radius:18px;
+overflow:hidden;
+background:black;
+}
+
+.quote-card img{
+width:100%;
+height:500px;
+object-fit:contain;
+background:black;
+display:block;
+}
+
+.quote-overlay{
+position:absolute;
+bottom:0;
+width:100%;
+padding:25px;
+text-align:center;
+font-size:25px;
+font-weight:800;
+color:white;
+background:linear-gradient(transparent,rgba(0,0,0,.9));
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+}
+
+.values{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+.values div{
+padding:20px;
+background:rgba(255,255,255,.08);
+border-radius:12px;
+}
+
+/* =========================
+   TEAM
+========================= */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:28px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.member-photo{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+.note{
+text-align:center;
+margin-top:30px;
+}
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.empty-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.placeholder{
+padding:30px;
+border-radius:15px;
+background:rgba(255,255,255,.08);
+text-align:center;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.gallery-item{
+border-radius:12px;
+overflow:hidden;
+}
+
+.gallery-item img{
+width:100%;
+height:280px;
+object-fit:cover;
+transition:.4s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.05);
+}
+
+.gallery-description{
+max-width:1000px;
+margin:35px auto 0;
+text-align:center;
+}
+
+/* =========================
+   EVENTS
+========================= */
+
+.event-box{
+max-width:800px;
+margin:auto;
+padding:35px;
+text-align:center;
+border-radius:15px;
+background:rgba(255,255,255,.08);
+}
+
+/* =========================
+   SOCIAL ACTIVITIES
+========================= */
+
+.social-gallery{
+display:flex;
+flex-direction:column;
+gap:45px;
+}
+
+.social-card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.social-card>img{
+width:100%;
+max-height:550px;
+object-fit:contain;
+display:block;
+margin:auto;
+border-radius:12px;
+}
+
+.social-card-content{
+text-align:center;
+padding-top:18px;
+}
+
+.social-card-content h3{
+font-size:28px;
+}
+
+.social-card-content p{
+font-size:20px;
+}
+
+/* =========================
+   IMAGE GROUPS
+========================= */
+
+.activity-images{
+display:grid;
+gap:16px;
+}
+
+.activity-images img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:12px;
+background:#eee;
+}
+
+/* Different layouts */
+
+.activity-images:has(img:nth-child(3):last-child){
+grid-template-columns:repeat(3,1fr);
+}
+
+.activity-images:has(img:nth-child(4):last-child){
+grid-template-columns:repeat(4,1fr);
+}
+
+.activity-images:has(img:nth-child(5):last-child){
+grid-template-columns:repeat(5,1fr);
+}
+
+.activity-images:has(img:nth-child(6):last-child){
+grid-template-columns:repeat(3,1fr);
+}
+
+/* =========================
+   BLINKING OBJECTIVE
+========================= */
+
+.main-objective{
+background:rgba(0,0,0,.92);
+padding:70px 7%;
+}
+
+.objective-highlight{
+background:#ffd54f;
+padding:30px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 0 25px rgba(255,213,79,.8);
+animation:blink 1.2s infinite;
+}
+
+.objective-highlight h2{
+margin:0;
+font-size:40px;
+color:black;
+}
+
+@keyframes blink{
+
+0%,100%{
+transform:scale(1);
+opacity:1;
+}
+
+50%{
+transform:scale(1.03);
+opacity:.65;
+}
+
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.contact-grid div{
+padding:25px;
+background:rgba(255,255,255,.08);
+border-radius:12px;
+}
+
+.contact-grid h3{
+font-size:24px;
+}
+
+.contact-grid a{
+color:white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+background:rgba(0,0,0,.95);
+color:white;
+text-align:center;
+padding:45px 20px;
+}
+
+footer img{
+width:80px;
+margin-bottom:12px;
+}
+
+footer h3{
+font-size:26px;
+}
+
+footer p{
+font-size:17px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.intro,
+.two-col{
+grid-template-columns:1fr;
+}
+
+.cards,
+.gallery,
+.empty-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.activity-images{
+grid-template-columns:repeat(2,1fr)!important;
+}
+
+}
+
+@media(max-width:768px){
+
+.menu{
+display:block;
+}
+
+nav{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+right:0;
+background:black;
+flex-direction:column;
+padding:20px;
+}
+
+nav.open{
+display:flex;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+h2{
+font-size:32px;
+}
+
+.activity-images{
+grid-template-columns:1fr!important;
+}
+
+.activity-images img{
+height:auto;
+max-height:450px;
+object-fit:contain;
+}
+
+.quote-card img{
+height:auto;
+max-height:600px;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+}
