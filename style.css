@@ -1803,3 +1803,63 @@ animation-iteration-count: 1 !important;
 transition-duration: 0.01ms !important;
 }
 }
+/* =====================================================
+   3D GOLDEN BLINKING CHINTAMANI PRATHISTHAN NAME
+===================================================== */
+
+.brand-text {
+  color: #ffd700;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+
+  /* 3D GOLD EFFECT */
+  text-shadow:
+    1px 1px 0 #b8860b,
+    2px 2px 0 #a87900,
+    3px 3px 0 #8b6508,
+    4px 4px 6px rgba(0, 0, 0, 0.65),
+    0 0 8px rgba(255, 215, 0, 0.8),
+    0 0 18px rgba(255, 215, 0, 0.5);
+
+  /* BLINK / GLOW */
+  animation: goldenBlink 1.5s infinite ease-in-out;
+
+  white-space: nowrap;
+}
+
+/* Golden blinking animation */
+@keyframes goldenBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow:
+      1px 1px 0 #b8860b,
+      2px 2px 0 #a87900,
+      3px 3px 0 #8b6508,
+      4px 4px 6px rgba(0, 0, 0, 0.65),
+      0 0 8px rgba(255, 215, 0, 0.8),
+      0 0 18px rgba(255, 215, 0, 0.5);
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(1.03);
+    text-shadow:
+      1px 1px 0 #b8860b,
+      2px 2px 0 #a87900,
+      3px 3px 0 #8b6508,
+      4px 4px 8px rgba(0, 0, 0, 0.7),
+      0 0 15px #ffd700,
+      0 0 30px #ffd700,
+      0 0 45px rgba(255, 215, 0, 0.8);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .brand-text {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+  }
+}
