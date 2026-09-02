@@ -17,24 +17,51 @@ html {
 body {
   font-family: 'Noto Sans Devanagari', sans-serif;
   color: #ffffff;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /*
+    FULL WEBSITE BACKGROUND
+    cp8.jpeg = human pyramid image
+  */
   background:
     linear-gradient(
-      rgba(80, 180, 220, 0.48),
-      rgba(80, 180, 220, 0.48)
+      rgba(70, 175, 220, 0.48),
+      rgba(70, 175, 220, 0.48)
     ),
     url("cp8.jpeg") center center / cover fixed no-repeat;
-  min-height: 100vh;
-  line-height: 1.7;
-  overflow-x: hidden;
 }
 
 /* =====================================================
-   COMMON
+   COLOUR VARIABLES
+===================================================== */
+
+:root {
+  --pearl: #F5F1E8;
+  --pearl-bright: #FFFDF5;
+  --pearl-soft: #E8E2D5;
+
+  --royal-blue: #4169E1;
+  --royal-blue-dark: #2145B8;
+  --royal-blue-light: #6485F0;
+
+  --sky-blue: #55B8DF;
+  --sky-dark: #1689B8;
+
+  --glass: rgba(70, 175, 220, 0.40);
+  --glass-dark: rgba(20, 105, 150, 0.58);
+
+  --shadow: rgba(0, 0, 0, 0.55);
+}
+
+/* =====================================================
+   BASIC ELEMENTS
 ===================================================== */
 
 a {
   text-decoration: none;
-  color: #F5F1E8;
+  color: var(--pearl);
 }
 
 img {
@@ -56,26 +83,7 @@ button {
 }
 
 /* =====================================================
-   PEARL COLOUR
-===================================================== */
-
-:root {
-  --pearl: #F5F1E8;
-  --pearl-bright: #FFFDF5;
-  --pearl-soft: #E8E2D5;
-
-  --sky: #55B8DF;
-  --sky-dark: #1689B8;
-  --sky-deep: #08658C;
-
-  --glass: rgba(70, 170, 210, 0.40);
-  --glass-dark: rgba(20, 105, 145, 0.55);
-
-  --shadow: rgba(0, 0, 0, 0.55);
-}
-
-/* =====================================================
-   PEARL TEXT EFFECT
+   PEARL TEXT
 ===================================================== */
 
 .brand strong,
@@ -92,9 +100,9 @@ button {
 
   text-shadow:
     0 1px 0 rgba(255, 255, 255, 0.95),
-    0 2px 2px rgba(120, 120, 120, 0.8),
+    0 2px 2px rgba(100, 100, 100, 0.9),
     0 4px 6px rgba(0, 0, 0, 0.75),
-    0 0 14px rgba(255, 255, 255, 0.40);
+    0 0 12px rgba(65, 105, 225, 0.65);
 }
 
 /* =====================================================
@@ -114,11 +122,12 @@ button {
 
   padding: 10px 4%;
 
-  background: rgba(65, 170, 210, 0.78);
+  background: rgba(55, 165, 210, 0.82);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 2px solid var(--royal-blue);
 
   box-shadow:
+    0 0 14px rgba(65, 105, 225, 0.50),
     0 4px 18px rgba(0, 0, 0, 0.35);
 
   backdrop-filter: blur(8px);
@@ -131,6 +140,7 @@ button {
 .brand {
   display: flex;
   align-items: center;
+
   gap: 13px;
 
   color: var(--pearl) !important;
@@ -146,11 +156,12 @@ button {
 
   border-radius: 50%;
 
-  border: 3px solid var(--pearl);
+  border: 4px solid var(--royal-blue);
 
   box-shadow:
-    0 0 10px rgba(255, 255, 255, 0.55),
-    0 4px 12px rgba(0, 0, 0, 0.5);
+    0 0 12px rgba(65, 105, 225, 0.85),
+    0 0 25px rgba(65, 105, 225, 0.35),
+    0 5px 15px rgba(0, 0, 0, 0.45);
 
   animation: logoBlink 2.5s ease-in-out infinite;
 }
@@ -165,12 +176,14 @@ button {
 
   white-space: nowrap;
 
-  animation: pearlGlow 2.8s ease-in-out infinite;
+  animation: pearlGlow 3s ease-in-out infinite;
 }
 
 .brand span {
   display: block;
+
   font-size: 0.75rem;
+
   color: var(--pearl-soft);
 }
 
@@ -180,14 +193,17 @@ button {
 
 .navbar nav {
   display: flex;
+
   align-items: center;
-  gap: 7px;
+
+  gap: 6px;
 }
 
 .navbar nav a {
   color: var(--pearl) !important;
 
   font-size: 0.95rem;
+
   font-weight: 700;
 
   padding: 8px 10px;
@@ -201,11 +217,16 @@ button {
 }
 
 .navbar nav a:hover {
-  background: rgba(255, 255, 255, 0.18);
-
   color: var(--pearl-bright) !important;
 
+  background: rgba(65, 105, 225, 0.45);
+
+  border: 1px solid rgba(245, 241, 232, 0.65);
+
   transform: translateY(-2px);
+
+  box-shadow:
+    0 0 10px rgba(65, 105, 225, 0.5);
 }
 
 /* =====================================================
@@ -215,9 +236,9 @@ button {
 .menu {
   display: none;
 
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  border: 2px solid var(--royal-blue);
 
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(65, 105, 225, 0.35);
 
   color: var(--pearl);
 
@@ -228,6 +249,9 @@ button {
   border-radius: 8px;
 
   cursor: pointer;
+
+  box-shadow:
+    0 0 8px rgba(65, 105, 225, 0.55);
 }
 
 /* =====================================================
@@ -240,7 +264,9 @@ button {
   min-height: 88vh;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   text-align: center;
@@ -251,8 +277,8 @@ button {
 }
 
 /*
-   Hero image hidden because cp8.jpeg
-   is already the full website background.
+  Hero image is hidden because
+  cp8.jpeg is the full website background.
 */
 
 .hero-image {
@@ -261,12 +287,13 @@ button {
 
 .hero-shade {
   position: absolute;
+
   inset: 0;
 
   background:
     linear-gradient(
-      rgba(20, 120, 165, 0.12),
-      rgba(0, 80, 120, 0.18)
+      rgba(20, 110, 160, 0.10),
+      rgba(0, 70, 120, 0.18)
     );
 
   pointer-events: none;
@@ -274,6 +301,7 @@ button {
 
 .hero-content {
   position: relative;
+
   z-index: 2;
 
   width: min(950px, 92%);
@@ -295,10 +323,11 @@ button {
 
   border-radius: 50%;
 
-  border: 5px solid var(--pearl);
+  border: 5px solid var(--royal-blue);
 
   box-shadow:
-    0 0 20px rgba(255, 255, 255, 0.65),
+    0 0 15px rgba(65, 105, 225, 0.85),
+    0 0 30px rgba(65, 105, 225, 0.40),
     0 8px 25px rgba(0, 0, 0, 0.55);
 
   animation: logoBlink 2.5s ease-in-out infinite;
@@ -310,6 +339,7 @@ button {
 
 .eyebrow {
   font-size: 1.05rem;
+
   font-weight: 800;
 
   margin-bottom: 8px;
@@ -326,15 +356,16 @@ button {
 
   color: var(--pearl) !important;
 
-  animation: pearlGlow 3s ease-in-out infinite;
-
   margin-bottom: 20px;
+
+  animation: pearlGlow 3s ease-in-out infinite;
 }
 
 .meta {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   flex-wrap: wrap;
@@ -349,13 +380,16 @@ button {
 }
 
 .meta span {
-  background: rgba(20, 110, 150, 0.55);
+  background: rgba(20, 105, 150, 0.60);
 
   padding: 6px 13px;
 
   border-radius: 20px;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--royal-blue);
+
+  box-shadow:
+    0 0 7px rgba(65, 105, 225, 0.35);
 }
 
 .hero-marathi {
@@ -391,6 +425,7 @@ button {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   min-width: 150px;
@@ -408,26 +443,33 @@ button {
 }
 
 .btn.primary {
-  background: rgba(245, 241, 232, 0.95);
+  background: var(--pearl);
 
-  color: #126B8F;
+  color: #174B9A;
+
+  border: 2px solid var(--royal-blue);
 
   box-shadow:
+    0 0 12px rgba(65, 105, 225, 0.55),
     0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn.secondary {
-  background: rgba(15, 105, 145, 0.72);
+  background: rgba(20, 105, 150, 0.75);
 
   color: var(--pearl);
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--royal-blue);
+
+  box-shadow:
+    0 0 10px rgba(65, 105, 225, 0.40);
 }
 
 .btn:hover {
   transform: translateY(-3px);
 
   box-shadow:
+    0 0 18px rgba(65, 105, 225, 0.75),
     0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -450,13 +492,14 @@ button {
 
   padding: 35px;
 
-  background: rgba(85, 184, 223, 0.42);
+  background: rgba(70, 175, 220, 0.42);
 
   border-radius: 22px;
 
-  border: 1px solid rgba(255, 255, 255, 0.30);
+  border: 2px solid var(--royal-blue);
 
   box-shadow:
+    0 0 14px rgba(65, 105, 225, 0.40),
     0 8px 30px rgba(0, 0, 0, 0.3);
 
   backdrop-filter: blur(5px);
@@ -474,7 +517,8 @@ button {
   margin-bottom: 15px;
 
   text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.7);
+    0 2px 4px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(65, 105, 225, 0.55);
 }
 
 .intro-copy p {
@@ -502,7 +546,10 @@ button {
 
   border-radius: 14px;
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid var(--royal-blue);
+
+  box-shadow:
+    0 0 8px rgba(65, 105, 225, 0.30);
 }
 
 .fact strong {
@@ -532,9 +579,10 @@ button {
 
   border-radius: 20px;
 
-  border: 2px solid rgba(245, 241, 232, 0.65);
+  border: 3px solid var(--royal-blue);
 
   box-shadow:
+    0 0 15px rgba(65, 105, 225, 0.55),
     0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
@@ -544,6 +592,7 @@ button {
   inset: 0;
 
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
@@ -592,13 +641,14 @@ button {
 
   padding: 50px 35px;
 
-  background: rgba(85, 184, 223, 0.40);
+  background: rgba(70, 175, 220, 0.40);
 
   border-radius: 22px;
 
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 2px solid var(--royal-blue);
 
   box-shadow:
+    0 0 14px rgba(65, 105, 225, 0.40),
     0 8px 28px rgba(0, 0, 0, 0.30);
 
   backdrop-filter: blur(5px);
@@ -606,6 +656,8 @@ button {
 
 .section.dark {
   background: rgba(20, 105, 145, 0.55);
+
+  border-color: var(--royal-blue);
 }
 
 .section h2 {
@@ -620,7 +672,8 @@ button {
   font-weight: 900;
 
   text-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.75);
+    0 2px 5px rgba(0, 0, 0, 0.75),
+    0 0 12px rgba(65, 105, 225, 0.60);
 }
 
 /* =====================================================
@@ -664,7 +717,10 @@ button {
 
   color: #ffffff;
 
-  border-left: 4px solid var(--pearl);
+  border: 2px solid var(--royal-blue);
+
+  box-shadow:
+    0 0 8px rgba(65, 105, 225, 0.25);
 }
 
 /* =====================================================
@@ -691,18 +747,28 @@ button {
 
   border-radius: 20px;
 
-  border: 1px solid rgba(255, 255, 255, 0.30);
+  border: 2px solid var(--royal-blue);
 
   box-shadow:
+    0 0 12px rgba(65, 105, 225, 0.40),
     0 8px 20px rgba(0, 0, 0, 0.3);
 
   transition:
-    transform 0.3s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-7px);
+
+  box-shadow:
+    0 0 20px rgba(65, 105, 225, 0.70),
+    0 10px 25px rgba(0, 0, 0, 0.4);
 }
+
+/* =====================================================
+   MEMBER PHOTOS
+===================================================== */
 
 .member-photo {
   width: 145px;
@@ -714,10 +780,10 @@ button {
 
   margin: 0 auto 18px;
 
-  border: 4px solid var(--pearl);
+  border: 4px solid var(--royal-blue);
 
   box-shadow:
-    0 0 15px rgba(255, 255, 255, 0.55),
+    0 0 12px rgba(65, 105, 225, 0.70),
     0 5px 15px rgba(0, 0, 0, 0.45);
 
   animation: photoBlink 3s ease-in-out infinite;
@@ -754,6 +820,7 @@ button {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   text-align: center;
@@ -764,11 +831,14 @@ button {
 
   border-radius: 15px;
 
-  border: 1px dashed rgba(245, 241, 232, 0.65);
+  border: 2px dashed var(--royal-blue);
 
   color: var(--pearl);
 
   font-weight: 700;
+
+  box-shadow:
+    0 0 9px rgba(65, 105, 225, 0.30);
 }
 
 /* =====================================================
@@ -791,9 +861,10 @@ button {
 
   border-radius: 18px;
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid var(--royal-blue);
 
   box-shadow:
+    0 0 12px rgba(65, 105, 225, 0.40),
     0 7px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -835,7 +906,10 @@ button {
 
   border-radius: 18px;
 
-  border: 1px solid rgba(245, 241, 232, 0.35);
+  border: 2px solid var(--royal-blue);
+
+  box-shadow:
+    0 0 12px rgba(65, 105, 225, 0.45);
 }
 
 .event-box h3 {
@@ -870,7 +944,10 @@ button {
 
   border-radius: 18px;
 
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 2px solid var(--royal-blue);
+
+  box-shadow:
+    0 0 12px rgba(65, 105, 225, 0.40);
 }
 
 .activity-images {
@@ -925,7 +1002,7 @@ button {
 
   border-radius: 20px;
 
-  border: 2px solid rgba(245, 241, 232, 0.55);
+  border: 3px solid var(--royal-blue);
 
   color: var(--pearl);
 
@@ -934,7 +1011,12 @@ button {
   font-weight: 900;
 
   text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.75);
+    0 2px 4px rgba(0, 0, 0, 0.75),
+    0 0 12px rgba(65, 105, 225, 0.65);
+
+  box-shadow:
+    0 0 18px rgba(65, 105, 225, 0.55),
+    0 8px 22px rgba(0, 0, 0, 0.35);
 }
 
 /* =====================================================
@@ -967,7 +1049,10 @@ button {
 
   border-radius: 15px;
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid var(--royal-blue);
+
+  box-shadow:
+    0 0 10px rgba(65, 105, 225, 0.35);
 }
 
 .contact h3 {
@@ -996,7 +1081,10 @@ footer {
 
   background: rgba(15, 105, 145, 0.72);
 
-  border-top: 1px solid rgba(255, 255, 255, 0.30);
+  border-top: 3px solid var(--royal-blue);
+
+  box-shadow:
+    0 0 15px rgba(65, 105, 225, 0.45);
 }
 
 footer img {
@@ -1009,7 +1097,10 @@ footer img {
 
   margin: 0 auto 12px;
 
-  border: 3px solid var(--pearl);
+  border: 4px solid var(--royal-blue);
+
+  box-shadow:
+    0 0 15px rgba(65, 105, 225, 0.75);
 
   animation: logoBlink 2.5s ease-in-out infinite;
 }
@@ -1022,7 +1113,8 @@ footer h3 {
   margin-bottom: 5px;
 
   text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.7);
+    0 2px 4px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(65, 105, 225, 0.55);
 }
 
 footer p {
@@ -1032,7 +1124,7 @@ footer p {
 }
 
 /* =====================================================
-   BLINKING / GLOW ANIMATIONS
+   BLINKING LOGO
 ===================================================== */
 
 @keyframes logoBlink {
@@ -1044,20 +1136,25 @@ footer p {
     transform: scale(1);
 
     box-shadow:
-      0 0 12px rgba(255, 255, 255, 0.45),
+      0 0 12px rgba(65, 105, 225, 0.70),
       0 5px 15px rgba(0, 0, 0, 0.45);
   }
 
   50% {
-    opacity: 0.82;
+    opacity: 0.88;
 
     transform: scale(1.035);
 
     box-shadow:
-      0 0 25px rgba(255, 255, 255, 0.85),
+      0 0 28px rgba(65, 105, 225, 1),
+      0 0 40px rgba(65, 105, 225, 0.45),
       0 5px 20px rgba(0, 0, 0, 0.5);
   }
 }
+
+/* =====================================================
+   BLINKING MEMBER PHOTOS
+===================================================== */
 
 @keyframes photoBlink {
 
@@ -1066,18 +1163,23 @@ footer p {
     opacity: 1;
 
     box-shadow:
-      0 0 10px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(65, 105, 225, 0.65),
       0 5px 15px rgba(0, 0, 0, 0.45);
   }
 
   50% {
-    opacity: 0.88;
+    opacity: 0.90;
 
     box-shadow:
-      0 0 22px rgba(255, 255, 255, 0.8),
+      0 0 25px rgba(65, 105, 225, 0.95),
+      0 0 35px rgba(65, 105, 225, 0.35),
       0 5px 18px rgba(0, 0, 0, 0.5);
   }
 }
+
+/* =====================================================
+   PEARL GLOW
+===================================================== */
 
 @keyframes pearlGlow {
 
@@ -1177,9 +1279,14 @@ footer p {
 
     padding: 10px;
 
-    background: rgba(20, 105, 145, 0.92);
+    background: rgba(20, 105, 145, 0.94);
 
     border-radius: 12px;
+
+    border: 2px solid var(--royal-blue);
+
+    box-shadow:
+      0 0 15px rgba(65, 105, 225, 0.55);
   }
 
   .navbar nav.open {
@@ -1192,6 +1299,12 @@ footer p {
     text-align: center;
 
     padding: 10px;
+
+    border-bottom: 1px solid rgba(245, 241, 232, 0.18);
+  }
+
+  .navbar nav a:last-child {
+    border-bottom: none;
   }
 
   .hero {
@@ -1304,6 +1417,11 @@ footer p {
     padding: 22px 15px;
 
     font-size: 1.25rem;
+  }
+
+  .member-photo {
+    width: 125px;
+    height: 125px;
   }
 }
 
