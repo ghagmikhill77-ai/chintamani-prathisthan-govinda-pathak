@@ -1,1072 +1,4597 @@
-<!DOCTYPE html>
-<html lang="mr">
-<head>
-  <meta charset="UTF-8">
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap');
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
 
-  <title>चिंतामणी प्रतिष्ठान | चिंचपोकळी</title>
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
 
-  <meta
-    name="description"
-    content="चिंतामणी प्रतिष्ठान, चिंचपोकळी — स्थापना २०११. एकता, शिस्त, परंपरा आणि जिद्द."
-  >
+:root {
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  --navy-950: #020817;
+  --navy-900: #061127;
+  --navy-850: #081633;
+  --navy-800: #0b1a3a;
+  --navy-700: #102653;
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
+  --royal: #4169e1;
+  --royal-light: #7894ff;
 
-  <link rel="stylesheet" href="style.css">
-</head>
+  --pearl: #f8f4eb;
+  --white: #ffffff;
 
-<body>
+  --muted: #d3d9e8;
+  --muted-dark: #aeb8ce;
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
+  --gold: #d6b36a;
+  --gold-light: #f1d78f;
 
-<header class="navbar">
+  --glass:
+    rgba(5, 15, 38, 0.58);
 
-  <div class="nav-inner">
+  --glass-strong:
+    rgba(3, 11, 29, 0.80);
 
-    <a href="#home" class="brand">
+  --line:
+    rgba(120, 150, 255, 0.28);
 
-      <img
-        src="logo.jpeg"
-        alt="चिंतामणी प्रतिष्ठान लोगो"
-        class="brand-logo"
-      >
+  --gold-line:
+    rgba(214, 179, 106, 0.38);
 
-      <span class="brand-name">
-        चिंतामणी प्रतिष्ठान
-      </span>
+  --shadow:
+    0 25px 80px rgba(0, 0, 0, 0.42);
 
-    </a>
+  --shadow-soft:
+    0 18px 55px rgba(0, 0, 0, 0.25);
 
-    <button
-      class="menu"
-      type="button"
-      aria-label="मेनू उघडा"
-      aria-expanded="false"
-      aria-controls="site-nav"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  --radius:
+    26px;
 
-    <nav id="site-nav">
+}
 
-      <a href="#home">मुख्यपृष्ठ</a>
-      <a href="#about">आमच्याबद्दल</a>
-      <a href="#team">आमचे पथक</a>
-      <a href="#achievements">यशोगाथा</a>
-      <a href="#gallery">गॅलरी</a>
-      <a href="#social">सामाजिक</a>
-      <a href="#social">कला</a>
-      <a href="#social">शैक्षणिक</a>
-      <a href="#events">उपक्रम</a>
-      <a href="#sponsors">प्रायोजक</a>
-      <a href="#instagram">Instagram</a>
-      <a href="#contact">संपर्क</a>
 
-    </nav>
+/* =====================================================
+   RESET
+===================================================== */
 
-  </div>
+* {
 
-</header>
+  margin: 0;
 
+  padding: 0;
 
-<!-- =====================================================
-     MAIN
-===================================================== -->
+  box-sizing: border-box;
 
-<main>
+}
 
-<!-- =====================================================
-     HERO
-===================================================== -->
 
-<section id="home" class="hero">
+html {
 
-  <div class="hero-content">
+  scroll-behavior: smooth;
 
-    <p class="eyebrow">
-      एकता&nbsp; | &nbsp;शिस्त&nbsp; | &nbsp;परंपरा&nbsp; | &nbsp;जिद्द
-    </p>
+  scroll-padding-top: 100px;
 
-    <img
-      src="logo.jpeg"
-      alt="चिंतामणी प्रतिष्ठान"
-      class="hero-logo"
-    >
+}
 
-    <h1>
-      चिंतामणी प्रतिष्ठान
-    </h1>
 
-    <div class="hero-line"></div>
+body {
 
-    <div class="hero-meta">
-      <span>चिंचपोकळी</span>
-      <span class="separator">◆</span>
-      <span>स्थापना २०११</span>
-    </div>
+  min-height: 100vh;
 
-    <p class="hero-marathi">
-      गोविंदा आला रे आला...<br>
-      <strong>८ थरवाले</strong>
-    </p>
+  position: relative;
 
-    <div class="buttons">
+  overflow-x: hidden;
 
-      <a href="#about" class="btn primary">
-        आमच्याबद्दल
-      </a>
+  background:
+    var(--navy-950);
 
-      <a href="#contact" class="btn secondary">
-        संपर्क करा
-      </a>
+  color:
+    var(--pearl);
 
-    </div>
+  font-family:
+    "Noto Sans Devanagari",
+    system-ui,
+    sans-serif;
 
-  </div>
+  line-height:
+    1.7;
+}
 
-</section>
 
+body::before {
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
+  content: "";
 
-<section class="intro">
+  position: fixed;
 
-  <div class="intro-copy">
+  inset: 0;
 
-    <p class="eyebrow">
-      आमच्याबद्दल
-    </p>
+  width: 100%;
 
-    <h2>
-      चिंतामणी प्रतिष्ठान
-    </h2>
+  height: 100%;
 
-    <p>
-      चिंचपोकळीच्या मातीतून एकता, शिस्त, परंपरा आणि
-      जिद्दीच्या बळावर उभे राहिलेले चिंतामणी प्रतिष्ठान
-      हे सामाजिक बांधिलकी आणि गोविंदा संस्कृतीची जपणूक
-      करणारे प्रतिष्ठान आहे.
-    </p>
+  background-image:
 
-    <p>
-      समाजसेवा, क्रीडा, पर्यावरण संवर्धन, आरोग्यविषयक
-      उपक्रम आणि गोविंदा पथकाच्या माध्यमातून समाजाशी
-      असलेले नाते अधिक दृढ करण्याचा आमचा सतत प्रयत्न आहे.
-    </p>
+    linear-gradient(
+      180deg,
+      rgba(2, 8, 23, 0.27),
+      rgba(2, 8, 23, 0.56)
+    ),
 
-    <div class="facts">
+    url("./chi.jpg");
 
-      <div class="fact">
-        <strong>२०११</strong>
-        <span>स्थापना</span>
-      </div>
+  background-position:
+    center center;
 
-      <div class="fact">
-        <strong>चिंचपोकळी</strong>
-        <span>ठिकाण</span>
-      </div>
+  background-repeat:
+    no-repeat;
 
-      <div class="fact">
-        <strong>नरेश तोरस्कर</strong>
-        <span>संस्थापक व अध्यक्ष</span>
-      </div>
+  background-size:
+    cover;
 
-      <div class="fact">
-        <strong>संतोष राऊत</strong>
-        <span>उपाध्यक्ष</span>
-      </div>
+  z-index:
+    -10;
 
-      <div class="fact">
-        <strong>गौरव खणकर</strong>
-        <span>गोविंदा पथकप्रमुख</span>
-      </div>
+  pointer-events:
+    none;
+}
 
-    </div>
 
-    <a href="#about" class="dark-btn">
-      अधिक जाणून घ्या
-      <span>→</span>
-    </a>
+body::after {
 
-  </div>
+  content: "";
 
+  position: fixed;
 
-  <div class="quote-card">
+  inset: 0;
 
-    <img
-      src="cp8.jpeg"
-      alt="चिंतामणी प्रतिष्ठान गोविंदा पथक"
-      loading="lazy"
-    >
+  background:
 
-    <div class="quote-overlay">
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(65, 105, 225, 0.16),
+      transparent 28%
+    ),
 
-      <p>
-        एकता आमची ताकद<br>
-        परंपरा आमची ओळख<br>
-        चिंचपोकळीची शान,<br>
-        <strong>चिंतामणी प्रतिष्ठान!</strong>
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section id="about" class="section dark">
-
-  <p class="eyebrow">
-    आमचा प्रवास
-  </p>
-
-  <h2>
-    परंपरेसोबत प्रगतीची वाटचाल
-  </h2>
-
-  <div class="two-col">
-
-    <div class="about-copy">
-
-      <h3>
-        आमची ओळख
-      </h3>
-
-      <p>
-        चिंतामणी प्रतिष्ठान हे केवळ गोविंदा पथक नसून
-        सामाजिक बांधिलकी, संस्कृती, क्रीडा आणि सेवाभाव
-        यांचा सुंदर संगम आहे.
-      </p>
-
-      <p>
-        प्रत्येक उपक्रमातून समाजासाठी काहीतरी सकारात्मक
-        करण्याचा आणि पुढील पिढीपर्यंत आपली परंपरा
-        अभिमानाने पोहोचवण्याचा आमचा प्रयत्न आहे.
-      </p>
-
-    </div>
-
-
-    <div class="values">
-
-      <div class="value">
-        <span>०१</span>
-        <h3>एकता</h3>
-        <p>
-          एकत्र येऊन मोठी स्वप्ने साकारण्याची ताकद.
-        </p>
-      </div>
-
-      <div class="value">
-        <span>०२</span>
-        <h3>शिस्त</h3>
-        <p>
-          प्रत्येक यशामागे शिस्तीचा मजबूत पाया.
-        </p>
-      </div>
-
-      <div class="value">
-        <span>०३</span>
-        <h3>परंपरा</h3>
-        <p>
-          संस्कृती आणि गोविंदा परंपरेचा अभिमान.
-        </p>
-      </div>
-
-      <div class="value">
-        <span>०४</span>
-        <h3>जिद्द</h3>
-        <p>
-          अडचणींवर मात करून पुढे जाण्याची जिद्द.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     TEAM
-===================================================== -->
-
-<section id="team" class="section">
-
-  <p class="eyebrow">
-    आमचे पथक
-  </p>
-
-  <h2>
-    नेतृत्व
-  </h2>
-
-  <div class="cards">
-
-    <article class="person-card">
-
-      <div class="person-image-wrap">
-
-        <img
-          src="nt.jpeg"
-          alt="नरेश तोरस्कर"
-          class="person-image"
-          loading="lazy"
-        >
-
-      </div>
-
-      <h3>
-        नरेश तोरस्कर
-      </h3>
-
-      <p>
-        संस्थापक व अध्यक्ष
-      </p>
-
-    </article>
-
-
-    <article class="person-card">
-
-      <div class="person-image-wrap">
-
-        <img
-          src="sr.jpeg"
-          alt="संतोष राऊत"
-          class="person-image"
-          loading="lazy"
-        >
-
-      </div>
-
-      <h3>
-        संतोष राऊत
-      </h3>
-
-      <p>
-        उपाध्यक्ष
-      </p>
-
-    </article>
-
-  </div>
-
-  <div class="note">
-    एकत्रित नेतृत्व, संघभावना आणि शिस्तीच्या जोरावर
-    चिंतामणी प्रतिष्ठानची वाटचाल सुरू आहे.
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     ACHIEVEMENTS
-===================================================== -->
-
-<section id="achievements" class="section dark">
-
-  <p class="eyebrow">
-    यशोगाथा
-  </p>
-
-  <h2>
-    आमची कामगिरी
-  </h2>
-
-  <div class="empty-grid">
-
-    <div class="placeholder">
-      <span>🏆</span>
-      <h3>यशोगाथा</h3>
-      <p>
-        लवकरच अधिक माहिती येथे उपलब्ध होईल.
-      </p>
-    </div>
-
-    <div class="placeholder">
-      <span>🥇</span>
-      <h3>सन्मान</h3>
-      <p>
-        लवकरच अधिक माहिती येथे उपलब्ध होईल.
-      </p>
-    </div>
-
-    <div class="placeholder">
-      <span>📜</span>
-      <h3>पुरस्कार</h3>
-      <p>
-        लवकरच अधिक माहिती येथे उपलब्ध होईल.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     GALLERY
-===================================================== -->
-
-<section id="gallery" class="section">
-
-  <p class="eyebrow">
-    चिंतामणी साठी प्रतिष्ठान कडून
-  </p>
-
-  <h2>
-    चिंतामणी साठी प्रतिष्ठान कडून
-  </h2>
-
-  <div class="gallery">
-
-    <div class="gallery-item">
-      <img src="tarafa.jpeg" alt="हायड्रॉलिक तराफा" loading="lazy">
-    </div>
-
-    <div class="gallery-item">
-      <img src="tarafa1.jpeg" alt="हायड्रॉलिक तराफा" loading="lazy">
-    </div>
-
-    <div class="gallery-item">
-      <img src="tarafa2.jpeg" alt="हायड्रॉलिक तराफा" loading="lazy">
-    </div>
-
-    <div class="gallery-item">
-      <img src="tarafa3.jpeg" alt="हायड्रॉलिक तराफा" loading="lazy">
-    </div>
-
-  </div>
-
-  <div class="gallery-description">
-
-    <p>
-      चिंतामणी प्रतिष्ठानच्या माध्यमातून चिंतामणी
-      उत्सवासाठी आधुनिक आणि सुरक्षित हायड्रॉलिक
-      तराफा उभारण्याचा संकल्प करण्यात आला आहे.
-    </p>
-
-    <p>
-      परंपरेसोबत आधुनिकतेची सांगड घालत हा उपक्रम
-      पुढील पिढीसाठी एक प्रेरणादायी पाऊल ठरेल.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     EVENTS
-===================================================== -->
-
-<section id="events" class="section dark">
-
-  <p class="eyebrow">
-    उपक्रम
-  </p>
-
-  <h2>
-    आगामी कार्यक्रम
-  </h2>
-
-  <div class="event-box">
-
-    <span class="event-label">
-      आगामी कार्यक्रम
-    </span>
-
-    <h3>
-      दहीहंडी २०२६
-    </h3>
-
-    <p>
-      कार्यक्रमाची सविस्तर माहिती लवकरच जाहीर करण्यात येईल.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     SOCIAL ACTIVITIES
-===================================================== -->
-
-<section id="social" class="section">
-
-  <p class="eyebrow">
-    सामाजिक
-  </p>
-
-  <h2>
-    सामाजिक उपक्रम
-  </h2>
-
-
-  <div class="social-gallery">
-
-    <!-- Blood Donation -->
-
-    <article class="social-card">
-
-      <img
-        src="samajik.jpeg"
-        alt="रक्तदान शिबीर"
-        loading="lazy"
-      >
-
-      <div class="social-content">
-        <h3>रक्तदान शिबीर</h3>
-        <p>
-          रक्तदान हेच जीवनदान.
-        </p>
-      </div>
-
-    </article>
-
-
-    <article class="social-card">
-
-      <img
-        src="samajik1.jpeg"
-        alt="सामाजिक बांधिलकी"
-        loading="lazy"
-      >
-
-      <div class="social-content">
-        <h3>सामाजिक बांधिलकी</h3>
-        <p>
-          समाजासाठी एक पाऊल.
-        </p>
-      </div>
-
-    </article>
-
-
-    <article class="social-card">
-
-      <img
-        src="samajik2.jpeg"
-        alt="समाजसेवा"
-        loading="lazy"
-      >
-
-      <div class="social-content">
-        <h3>समाजसेवा</h3>
-        <p>
-          सेवेतून समाधान.
-        </p>
-      </div>
-
-    </article>
-
-
-    <!-- Environment -->
-
-    <article class="social-card wide">
-
-      <div class="activity-images">
-
-        <img src="tr.jpeg" alt="वृक्षारोपण" loading="lazy">
-        <img src="tr1.jpeg" alt="वृक्षारोपण" loading="lazy">
-        <img src="tr2.jpeg" alt="वृक्षारोपण" loading="lazy">
-        <img src="tr3.jpeg" alt="वृक्षारोपण" loading="lazy">
-
-      </div>
-
-      <div class="social-content">
-        <h3>हिरवा निसर्ग, आपली जबाबदारी</h3>
-        <p>
-          वृक्षारोपण उपक्रम.
-        </p>
-      </div>
-
-    </article>
-
-
-    <!-- Food Donation -->
-
-    <article class="social-card wide">
-
-      <div class="activity-images">
-
-        <img src="eq1.jpeg" alt="अन्नदान सेवा" loading="lazy">
-        <img src="eq2.jpeg" alt="अन्नदान सेवा" loading="lazy">
-        <img src="eq3.jpeg" alt="अन्नदान सेवा" loading="lazy">
-
-      </div>
-
-      <div class="social-content">
-        <h3>मायेचा घास - अन्नदान सेवा</h3>
-        <p>
-          टाटा रुग्णालयाजवळ रुग्णांच्या नातेवाईकांसाठी
-          अन्नदान सेवा.
-        </p>
-      </div>
-
-    </article>
-
-
-    <!-- Eye Camp -->
-
-    <article class="social-card wide">
-
-      <div class="activity-images">
-
-        <img src="eye.jpeg" alt="नेत्र तपासणी" loading="lazy">
-        <img src="eye1.jpeg" alt="नेत्र तपासणी" loading="lazy">
-        <img src="eye2.jpeg" alt="नेत्र तपासणी" loading="lazy">
-
-      </div>
-
-      <div class="social-content">
-        <h3>दृष्टी हीच सृष्टी</h3>
-        <p>
-          मोफत नेत्र तपासणी शिबिर.
-        </p>
-      </div>
-
-    </article>
-
-
-    <!-- Orphanage -->
-
-    <article class="social-card wide">
-
-      <div class="activity-images">
-
-        <img src="ka.jpeg" alt="अनाथालय सेवा" loading="lazy">
-        <img src="ka1.jpeg" alt="अनाथालय सेवा" loading="lazy">
-        <img src="ka2.jpeg" alt="अनाथालय सेवा" loading="lazy">
-        <img src="ka3.jpeg" alt="अनाथालय सेवा" loading="lazy">
-        <img src="ka4.jpeg" alt="अनाथालय सेवा" loading="lazy">
-
-      </div>
-
-      <div class="social-content">
-        <h3>सेवा हीच खरी भक्ती</h3>
-        <p>
-          अनाथालयातील सेवाभावी उपक्रम.
-        </p>
-      </div>
-
-    </article>
-
-
-    <!-- Beach Cleanup -->
-
-    <article class="social-card wide">
-
-      <div class="activity-images">
-
-        <img src="b.jpeg" alt="बीच स्वच्छता अभियान" loading="lazy">
-        <img src="b1.jpeg" alt="बीच स्वच्छता अभियान" loading="lazy">
-        <img src="b2.jpeg" alt="बीच स्वच्छता अभियान" loading="lazy">
-
-      </div>
-
-      <div class="social-content">
-        <h3>बीच स्वच्छता अभियान</h3>
-        <p>
-          स्वच्छ समुद्रकिनारा, सुंदर पर्यावरण.
-        </p>
-      </div>
-
-    </article>
-
-
-    <!-- Wheelchair -->
-
-    <article class="social-card wide">
-
-      <div class="activity-images">
-
-        <img src="ad.jpeg" alt="व्हील चेअर वाटप" loading="lazy">
-        <img src="ad1.jpeg" alt="व्हील चेअर वाटप" loading="lazy">
-        <img src="ad2.jpeg" alt="व्हील चेअर वाटप" loading="lazy">
-        <img src="ad3.jpeg" alt="व्हील चेअर वाटप" loading="lazy">
-
-      </div>
-
-      <div class="social-content">
-        <h3>दिव्यांग बांधवांना मोफत व्हील चेअर वाटप</h3>
-        <p>
-          गरजू बांधवांना मदतीचा हात.
-        </p>
-      </div>
-
-    </article>
-
-
-    <!-- Kabaddi -->
-
-    <article class="social-card wide">
-
-      <div class="activity-images">
-
-        <img src="cp.jpeg" alt="कबड्डी संघ" loading="lazy">
-        <img src="cp2.jpeg" alt="कबड्डी संघ" loading="lazy">
-        <img src="cp3.jpeg" alt="कबड्डी संघ" loading="lazy">
-        <img src="c4.jpeg" alt="कबड्डी संघ" loading="lazy">
-        <img src="cp5.jpeg" alt="कबड्डी संघ" loading="lazy">
-        <img src="cp6.jpeg" alt="कबड्डी संघ" loading="lazy">
-
-      </div>
-
-      <div class="social-content">
-        <h3>कबड्डी संघ</h3>
-        <p>
-          क्रीडा, संघभावना आणि जिद्द.
-        </p>
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     MAIN OBJECTIVE
-===================================================== -->
-
-<section class="section main-objective">
-
-  <div class="objective-highlight">
-
-    <p class="eyebrow">
-      आमचा संकल्प
-    </p>
-
-    <h2>
-      प्रमुख उद्देश - चिंतामणीसाठी हायड्रॉलिक तराफा
-    </h2>
-
-    <p>
-      चिंतामणी उत्सवाची परंपरा अधिक सुरक्षित,
-      आधुनिक आणि भव्य करण्यासाठी हायड्रॉलिक तराफा
-      उभारण्याचा आमचा प्रमुख संकल्प आहे.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     SPONSORS
-===================================================== -->
-
-<section id="sponsors" class="section">
-
-  <p class="eyebrow">
-    सहकार्य
-  </p>
-
-  <h2>
-    आमचे प्रायोजक
-  </h2>
-
-  <div class="sponsor-box">
-
-    <p>
-      चिंतामणी प्रतिष्ठानच्या विविध सामाजिक आणि
-      सांस्कृतिक उपक्रमांसाठी सहकार्य करणाऱ्या
-      सर्वांचे मनःपूर्वक आभार.
-    </p>
-
-    <span>
-      प्रायोजकांची माहिती लवकरच येथे उपलब्ध होईल.
-    </span>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     INSTAGRAM
-===================================================== -->
-
-<section id="instagram" class="section instagram-section">
-
-  <div class="instagram-card">
-
-    <div class="instagram-logo">
-
-      <div class="instagram-logo-inner">
-
-        <div class="instagram-camera-dot"></div>
-
-      </div>
-
-    </div>
-
-
-    <div class="instagram-content">
-
-      <p class="eyebrow">
-        सोशल मीडिया
-      </p>
-
-      <h2>
-        आम्हाला Instagram वर Follow करा
-      </h2>
-
-      <p>
-        चिंतामणी प्रतिष्ठानच्या सामाजिक उपक्रम,
-        गोविंदा पथकातील क्षण, कार्यक्रम आणि
-        नवीन अपडेट्स पाहण्यासाठी आमच्या Instagram
-        प्रोफाइलला भेट द्या.
-      </p>
-
-
-      <a
-        href="https://www.instagram.com/chintamanipratishtan?stkn=dmY4dWc1Nm1sOXJk"
-        class="instagram-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="चिंतामणी प्रतिष्ठान Instagram प्रोफाइल उघडा"
-      >
-
-        <span class="instagram-btn-icon">
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="5"
-              ry="5"
-            ></rect>
-
-            <circle
-              cx="12"
-              cy="12"
-              r="4"
-            ></circle>
-
-            <circle
-              cx="17.5"
-              cy="6.5"
-              r="1.2"
-              class="instagram-dot"
-            ></circle>
-          </svg>
-        </span>
-
-        <span class="instagram-btn-text">
-          Follow us on Instagram
-        </span>
-
-        <strong>
-          @chintamanipratishtan
-        </strong>
-
-        <span class="instagram-arrow">
-          ↗
-        </span>
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section id="contact" class="section contact dark">
-
-  <p class="eyebrow">
-    संपर्क
-  </p>
-
-  <h2>
-    चिंतामणी प्रतिष्ठानशी संपर्क साधा
-  </h2>
-
-  <div class="contact-grid">
-
-    <div class="contact-card">
-
-      <span class="contact-icon">⌖</span>
-
-      <h3>
-        पत्ता
-      </h3>
-
-      <p>
-        अ/११, अष्टविनायक इमारत,<br>
-        दत्ताराम लाड मार्ग,<br>
-        चिंचपोकळी मुंबई ४०००७०
-      </p>
-
-    </div>
-
-
-    <div class="contact-card">
-
-      <span class="contact-icon">✉</span>
-
-      <h3>
-        ई-मेल
-      </h3>
-
-      <a href="mailto:chintamaniprathisthan8@gmail.com">
-        chintamaniprathisthan8@gmail.com
-      </a>
-
-    </div>
-
-
-    <div class="contact-card">
-
-      <span class="contact-icon">☎</span>
-
-      <h3>
-        मोबाईल
-      </h3>
-
-      <a href="tel:+917710900450">
-        ७७१०९००४५०
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-  <div class="footer-inner">
-
-    <img
-      src="logo.jpeg"
-      alt="चिंतामणी प्रतिष्ठान लोगो"
-      class="footer-logo"
-    >
-
-    <h3>
-      चिंतामणी प्रतिष्ठान
-    </h3>
-
-    <p>
-      चिंचपोकळी • स्थापना २०११
-    </p>
-
-    <a
-      href="https://www.instagram.com/chintamanipratishtan?stkn=dmY4dWc1Nm1sOXJk"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="footer-instagram"
-    >
-      Instagram • @chintamanipratishtan
-    </a>
-
-    <p class="copyright">
-      © २०२६ चिंतामणी प्रतिष्ठान. सर्व हक्क राखीव.
-    </p>
-
-  </div>
-
-</footer>
-
-
-<!-- =====================================================
-     MOBILE MENU SCRIPT
-===================================================== -->
-
-<script>
-
-  const menu = document.querySelector(".menu");
-  const nav = document.querySelector("#site-nav");
-
-  menu.addEventListener("click", () => {
-
-    const isOpen = nav.classList.toggle("open");
-
-    menu.setAttribute(
-      "aria-expanded",
-      isOpen ? "true" : "false"
+    radial-gradient(
+      circle at 90% 75%,
+      rgba(214, 179, 106, 0.09),
+      transparent 30%
     );
 
-  });
+  z-index:
+    -9;
+
+  pointer-events:
+    none;
+}
 
 
-  document.querySelectorAll("#site-nav a").forEach((link) => {
+main,
+header,
+footer {
 
-    link.addEventListener("click", () => {
+  position:
+    relative;
 
-      nav.classList.remove("open");
-
-      menu.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-    });
-
-  });
+  z-index:
+    1;
+}
 
 
-  document.addEventListener("keydown", (event) => {
+img {
 
-    if (event.key === "Escape") {
+  max-width:
+    100%;
 
-      nav.classList.remove("open");
+  display:
+    block;
+}
 
-      menu.setAttribute(
-        "aria-expanded",
-        "false"
-      );
 
-    }
+a {
 
-  });
+  color:
+    inherit;
+}
 
-</script>
 
-</body>
-</html>
+button {
+
+  font-family:
+    inherit;
+}
+
+
+::selection {
+
+  background:
+    var(--royal);
+
+  color:
+    var(--white);
+}
+
+
+/* =====================================================
+   PAGE LOADER
+===================================================== */
+
+.page-loader {
+
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  z-index:
+    9999;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    18px;
+
+  background:
+    var(--navy-950);
+
+  transition:
+    opacity 0.7s ease,
+    visibility 0.7s ease;
+}
+
+
+body.loaded .page-loader {
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+}
+
+
+.loader-logo {
+
+  width:
+    80px;
+
+  height:
+    80px;
+
+  border:
+    2px solid var(--gold);
+
+  border-radius:
+    50%;
+
+  padding:
+    5px;
+
+  animation:
+    luxuryPulse 2s ease-in-out infinite;
+}
+
+
+.loader-logo img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  border-radius:
+    50%;
+
+  object-fit:
+    cover;
+}
+
+
+.loader-line {
+
+  width:
+    120px;
+
+  height:
+    2px;
+
+  overflow:
+    hidden;
+
+  background:
+    rgba(255, 255, 255, 0.10);
+}
+
+
+.loader-line::after {
+
+  content:
+    "";
+
+  display:
+    block;
+
+  width:
+    50%;
+
+  height:
+    100%;
+
+  background:
+    var(--gold);
+
+  animation:
+    loaderMove 1.3s ease-in-out infinite;
+}
+
+
+.page-loader p {
+
+  color:
+    var(--gold-light);
+
+  font-weight:
+    800;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+  position:
+    sticky;
+
+  top:
+    0;
+
+  z-index:
+    1000;
+
+  background:
+    rgba(2, 9, 27, 0.78);
+
+  border-bottom:
+    1px solid rgba(120, 150, 255, 0.20);
+
+  backdrop-filter:
+    blur(22px);
+
+  -webkit-backdrop-filter:
+    blur(22px);
+}
+
+
+.nav-inner {
+
+  width:
+    min(1450px, 100%);
+
+  margin:
+    auto;
+
+  padding:
+    10px 28px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    24px;
+}
+
+
+.brand {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  flex-shrink:
+    0;
+
+  text-decoration:
+    none;
+}
+
+
+.brand-logo {
+
+  width:
+    56px;
+
+  height:
+    56px;
+
+  object-fit:
+    cover;
+
+  border:
+    2px solid var(--gold);
+
+  border-radius:
+    50%;
+
+  box-shadow:
+
+    0 0 0 4px
+    rgba(214, 179, 106, 0.06),
+
+    0 0 28px
+    rgba(65, 105, 225, 0.28);
+
+  animation:
+    luxuryPulse 4s ease-in-out infinite;
+}
+
+
+.brand-text {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+}
+
+
+.brand-name {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    1.08rem;
+
+  font-weight:
+    900;
+
+  line-height:
+    1.3;
+
+  white-space:
+    nowrap;
+
+  text-shadow:
+    0 2px 15px rgba(65, 105, 225, 0.35);
+}
+
+
+.brand-text small {
+
+  color:
+    var(--muted-dark);
+
+  font-size:
+    0.68rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.08em;
+}
+
+
+nav {
+
+  margin-left:
+    auto;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    flex-end;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    3px;
+}
+
+
+nav a {
+
+  position:
+    relative;
+
+  padding:
+    9px 10px;
+
+  color:
+    rgba(248, 244, 235, 0.80);
+
+  text-decoration:
+    none;
+
+  font-size:
+    0.83rem;
+
+  font-weight:
+    600;
+
+  border-radius:
+    11px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+nav a::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    12px;
+
+  right:
+    12px;
+
+  bottom:
+    4px;
+
+  height:
+    2px;
+
+  transform:
+    scaleX(0);
+
+  transform-origin:
+    center;
+
+  background:
+    var(--gold);
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+nav a:hover,
+nav a.active {
+
+  color:
+    var(--gold-light);
+
+  background:
+    rgba(65, 105, 225, 0.13);
+}
+
+
+nav a:hover::after,
+nav a.active::after {
+
+  transform:
+    scaleX(1);
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.menu {
+
+  display:
+    none;
+
+  width:
+    44px;
+
+  height:
+    44px;
+
+  margin-left:
+    auto;
+
+  border:
+    1px solid
+    rgba(214, 179, 106, 0.45);
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(65, 105, 225, 0.10);
+
+  cursor:
+    pointer;
+}
+
+
+.menu span {
+
+  display:
+    block;
+
+  width:
+    21px;
+
+  height:
+    2px;
+
+  margin:
+    5px auto;
+
+  background:
+    var(--gold-light);
+
+  border-radius:
+    5px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+  min-height:
+    calc(100vh - 77px);
+
+  padding:
+    85px 22px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  position:
+    relative;
+}
+
+
+.hero-content {
+
+  position:
+    relative;
+
+  width:
+    min(1000px, 100%);
+
+  padding:
+    58px 42px;
+
+  text-align:
+    center;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(5, 16, 42, 0.77),
+      rgba(7, 19, 46, 0.50)
+    );
+
+  border:
+    1px solid
+    rgba(214, 179, 106, 0.36);
+
+  border-radius:
+    36px;
+
+  box-shadow:
+
+    var(--shadow),
+
+    inset
+    0 1px 0
+    rgba(255, 255, 255, 0.08);
+
+  backdrop-filter:
+    blur(17px);
+
+  -webkit-backdrop-filter:
+    blur(17px);
+
+  overflow:
+    hidden;
+}
+
+
+.hero-content::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    450px;
+
+  height:
+    450px;
+
+  top:
+    -300px;
+
+  right:
+    -150px;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(65, 105, 225, 0.24),
+      transparent 70%
+    );
+
+  pointer-events:
+    none;
+}
+
+
+.hero-top-line {
+
+  width:
+    150px;
+
+  height:
+    2px;
+
+  margin:
+    0 auto 24px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+}
+
+
+.eyebrow {
+
+  margin-bottom:
+    11px;
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    0.76rem;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.hero-logo-ring {
+
+  width:
+    165px;
+
+  height:
+    165px;
+
+  margin:
+    22px auto 24px;
+
+  padding:
+    7px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid
+    rgba(214, 179, 106, 0.55);
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(65, 105, 225, 0.08);
+
+  box-shadow:
+
+    0 0 0 8px
+    rgba(214, 179, 106, 0.05),
+
+    0 0 55px
+    rgba(65, 105, 225, 0.35);
+
+  animation:
+    luxuryPulse 4s ease-in-out infinite;
+}
+
+
+.hero-logo {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  border:
+    3px solid
+    var(--gold-light);
+
+  border-radius:
+    50%;
+}
+
+
+.hero-location {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    0.86rem;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    0.08em;
+}
+
+
+.hero h1 {
+
+  margin-top:
+    8px;
+
+  color:
+    var(--pearl);
+
+  font-size:
+    clamp(2.7rem, 7vw, 5.8rem);
+
+  line-height:
+    1.2;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    -0.04em;
+
+  text-shadow:
+
+    0 4px 22px
+    rgba(0, 0, 0, 0.65),
+
+    0 0 35px
+    rgba(65, 105, 225, 0.25);
+}
+
+
+.hero-divider {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    14px;
+
+  margin:
+    22px auto;
+}
+
+
+.hero-divider span {
+
+  width:
+    70px;
+
+  height:
+    1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold)
+    );
+}
+
+
+.hero-divider span:last-child {
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      transparent
+    );
+}
+
+
+.hero-divider i {
+
+  color:
+    var(--gold);
+
+  font-style:
+    normal;
+
+  font-size:
+    0.6rem;
+}
+
+
+.hero-subtitle {
+
+  color:
+    var(--pearl);
+
+  font-size:
+    clamp(1.15rem, 3vw, 1.55rem);
+
+  font-weight:
+    700;
+}
+
+
+.hero-subtitle strong {
+
+  color:
+    var(--gold-light);
+
+  margin-left:
+    5px;
+
+  font-size:
+    1.15em;
+}
+
+
+.hero-description {
+
+  max-width:
+    680px;
+
+  margin:
+    15px auto 0;
+
+  color:
+    var(--muted);
+
+  font-size:
+    0.98rem;
+
+  line-height:
+    1.9;
+}
+
+
+.hero-badges {
+
+  margin:
+    28px auto 0;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  flex-wrap:
+    wrap;
+}
+
+
+.hero-badges span {
+
+  min-width:
+    125px;
+
+  padding:
+    9px 13px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  border:
+    1px solid
+    rgba(120, 150, 255, 0.22);
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(65, 105, 225, 0.08);
+
+  color:
+    var(--muted-dark);
+
+  font-size:
+    0.7rem;
+
+  font-weight:
+    600;
+}
+
+
+.hero-badges b {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    0.82rem;
+
+  font-weight:
+    900;
+}
+
+
+.buttons {
+
+  margin-top:
+    30px;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    13px;
+
+  flex-wrap:
+    wrap;
+}
+
+
+.btn {
+
+  min-height:
+    49px;
+
+  padding:
+    12px 23px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    9px;
+
+  border-radius:
+    13px;
+
+  text-decoration:
+    none;
+
+  font-weight:
+    800;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.btn.primary {
+
+  color:
+    var(--navy-950);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold-light),
+      var(--gold)
+    );
+
+  box-shadow:
+    0 12px 32px
+    rgba(214, 179, 106, 0.18);
+}
+
+
+.btn.secondary {
+
+  color:
+    var(--pearl);
+
+  background:
+    rgba(65, 105, 225, 0.13);
+
+  border:
+    1px solid
+    rgba(120, 150, 255, 0.40);
+}
+
+
+.btn:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 16px 38px
+    rgba(0, 0, 0, 0.32);
+}
+
+
+/* =====================================================
+   HERO ORBS
+===================================================== */
+
+.hero-orb {
+
+  position:
+    absolute;
+
+  border-radius:
+    50%;
+
+  pointer-events:
+    none;
+
+  filter:
+    blur(3px);
+}
+
+
+.hero-orb-one {
+
+  width:
+    300px;
+
+  height:
+    300px;
+
+  left:
+    -180px;
+
+  top:
+    25%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(65, 105, 225, 0.16),
+      transparent 70%
+    );
+}
+
+
+.hero-orb-two {
+
+  width:
+    260px;
+
+  height:
+    260px;
+
+  right:
+    -150px;
+
+  bottom:
+    10%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(214, 179, 106, 0.09),
+      transparent 70%
+    );
+}
+
+
+/* =====================================================
+   PREMIUM PANELS
+===================================================== */
+
+.premium-panel {
+
+  background:
+    var(--glass);
+
+  border:
+    1px solid
+    var(--line);
+
+  box-shadow:
+    var(--shadow-soft);
+
+  backdrop-filter:
+    blur(17px);
+
+  -webkit-backdrop-filter:
+    blur(17px);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+
+  width:
+    min(1400px, 100%);
+
+  margin:
+    auto;
+
+  padding:
+    100px 24px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1.05fr 0.95fr;
+
+  gap:
+    40px;
+
+  align-items:
+    stretch;
+}
+
+
+.intro-copy {
+
+  padding:
+    48px;
+
+  border-radius:
+    var(--radius);
+}
+
+
+.intro-copy h2 {
+
+  color:
+    var(--pearl);
+
+  font-size:
+    clamp(2rem, 4vw, 3.35rem);
+
+  line-height:
+    1.35;
+
+  font-weight:
+    900;
+
+  text-shadow:
+    0 3px 16px
+    rgba(0, 0, 0, 0.45);
+}
+
+
+.gold-line {
+
+  width:
+    75px;
+
+  height:
+    3px;
+
+  margin:
+    20px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      var(--royal),
+      transparent
+    );
+
+  border-radius:
+    10px;
+}
+
+
+.gold-line.center {
+
+  margin:
+    20px auto;
+}
+
+
+.intro-copy > p:not(.eyebrow) {
+
+  color:
+    var(--muted);
+
+  font-size:
+    0.98rem;
+
+  line-height:
+    1.95;
+
+  margin-bottom:
+    17px;
+}
+
+
+.facts {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap:
+    9px;
+
+  margin:
+    30px 0;
+}
+
+
+.fact {
+
+  min-height:
+    105px;
+
+  padding:
+    12px 9px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  text-align:
+    center;
+
+  background:
+    rgba(65, 105, 225, 0.07);
+
+  border:
+    1px solid
+    rgba(120, 150, 255, 0.17);
+
+  border-radius:
+    14px;
+}
+
+
+.fact strong {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    0.82rem;
+
+  font-weight:
+    900;
+
+  line-height:
+    1.5;
+}
+
+
+.fact span {
+
+  margin-top:
+    4px;
+
+  color:
+    var(--muted-dark);
+
+  font-size:
+    0.68rem;
+
+  line-height:
+    1.5;
+}
+
+
+.dark-btn {
+
+  min-height:
+    48px;
+
+  padding:
+    11px 21px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    9px;
+
+  color:
+    var(--pearl);
+
+  background:
+    rgba(65, 105, 225, 0.13);
+
+  border:
+    1px solid
+    rgba(120, 150, 255, 0.32);
+
+  border-radius:
+    13px;
+
+  text-decoration:
+    none;
+
+  font-weight:
+    800;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.dark-btn span {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    1.2rem;
+}
+
+
+.dark-btn:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   QUOTE CARD
+===================================================== */
+
+.quote-card {
+
+  min-height:
+    520px;
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    var(--radius);
+}
+
+
+.quote-card img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  min-height:
+    520px;
+
+  object-fit:
+    cover;
+
+  transition:
+    transform 0.8s ease;
+}
+
+
+.quote-card:hover img {
+
+  transform:
+    scale(1.04);
+}
+
+
+.quote-overlay {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  padding:
+    36px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    flex-end;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 25%,
+      rgba(2, 8, 23, 0.91) 100%
+    );
+}
+
+
+.quote-small {
+
+  margin-bottom:
+    8px;
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    0.75rem;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.10em;
+}
+
+
+.quote-overlay p {
+
+  color:
+    var(--pearl);
+
+  font-size:
+    clamp(1.15rem, 2.5vw, 1.5rem);
+
+  line-height:
+    1.8;
+
+  font-weight:
+    700;
+
+  text-shadow:
+    0 3px 15px
+    rgba(0, 0, 0, 0.65);
+}
+
+
+.quote-overlay strong {
+
+  color:
+    var(--gold-light);
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section {
+
+  width:
+    min(1400px, 100%);
+
+  margin:
+    auto;
+
+  padding:
+    110px 24px;
+}
+
+
+.section.dark {
+
+  max-width:
+    none;
+
+  padding-left:
+    max(
+      24px,
+      calc((100vw - 1352px) / 2)
+    );
+
+  padding-right:
+    max(
+      24px,
+      calc((100vw - 1352px) / 2)
+    );
+
+  background:
+    rgba(2, 8, 23, 0.30);
+
+  border-top:
+    1px solid
+    rgba(120, 150, 255, 0.08);
+
+  border-bottom:
+    1px solid
+    rgba(120, 150, 255, 0.08);
+}
+
+
+.section-heading {
+
+  margin-bottom:
+    45px;
+}
+
+
+.section-heading h2 {
+
+  color:
+    var(--pearl);
+
+  font-size:
+    clamp(2rem, 4vw, 3.25rem);
+
+  line-height:
+    1.35;
+
+  font-weight:
+    900;
+
+  text-shadow:
+    0 3px 16px
+    rgba(0, 0, 0, 0.45);
+}
+
+
+.section-heading h2::after {
+
+  content:
+    "";
+
+  display:
+    block;
+
+  width:
+    72px;
+
+  height:
+    3px;
+
+  margin-top:
+    15px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      var(--royal),
+      transparent
+    );
+
+  border-radius:
+    10px;
+}
+
+
+.section-lead {
+
+  margin-top:
+    10px;
+
+  color:
+    var(--muted-dark);
+
+  font-size:
+    0.96rem;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.two-col {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    0.85fr 1.15fr;
+
+  gap:
+    45px;
+
+  align-items:
+    start;
+}
+
+
+.about-copy {
+
+  position:
+    relative;
+
+  padding:
+    35px;
+
+  border-radius:
+    23px;
+}
+
+
+.number-mark {
+
+  display:
+    inline-block;
+
+  margin-bottom:
+    10px;
+
+  color:
+    rgba(120, 150, 255, 0.65);
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    900;
+}
+
+
+.about-copy h3 {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    1.5rem;
+
+  margin-bottom:
+    18px;
+}
+
+
+.about-copy p {
+
+  color:
+    var(--muted);
+
+  line-height:
+    1.9;
+
+  margin-bottom:
+    17px;
+}
+
+
+.values {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    18px;
+}
+
+
+.value {
+
+  padding:
+    27px;
+
+  border-radius:
+    20px;
+
+  display:
+    flex;
+
+  gap:
+    17px;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.value:hover {
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(214, 179, 106, 0.48);
+}
+
+
+.value > span {
+
+  color:
+    rgba(120, 150, 255, 0.70);
+
+  font-size:
+    0.75rem;
+
+  font-weight:
+    900;
+}
+
+
+.value h3 {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    1.3rem;
+}
+
+
+.value p {
+
+  margin-top:
+    6px;
+
+  color:
+    var(--muted-dark);
+
+  font-size:
+    0.89rem;
+
+  line-height:
+    1.7;
+}
+
+
+/* =====================================================
+   TEAM
+===================================================== */
+
+.cards {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2, minmax(250px, 370px));
+
+  justify-content:
+    center;
+
+  gap:
+    35px;
+}
+
+
+.person-card {
+
+  position:
+    relative;
+
+  padding:
+    32px 25px;
+
+  text-align:
+    center;
+
+  border-radius:
+    27px;
+
+  overflow:
+    hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.person-card:hover {
+
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(214, 179, 106, 0.52);
+}
+
+
+.person-top {
+
+  margin-bottom:
+    22px;
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    0.72rem;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.10em;
+}
+
+
+.person-image-wrap {
+
+  width:
+    190px;
+
+  height:
+    190px;
+
+  margin:
+    0 auto 23px;
+
+  padding:
+    6px;
+
+  border-radius:
+    50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold),
+      var(--royal),
+      var(--gold)
+    );
+
+  box-shadow:
+
+    0 0 0 6px
+    rgba(214, 179, 106, 0.06),
+
+    0 0 42px
+    rgba(65, 105, 225, 0.30);
+
+  animation:
+    luxuryPulse 4.5s ease-in-out infinite;
+}
+
+
+.person-image {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  border:
+    4px solid
+    var(--navy-900);
+
+  border-radius:
+    50%;
+}
+
+
+.person-line {
+
+  width:
+    50px;
+
+  height:
+    2px;
+
+  margin:
+    0 auto 14px;
+
+  background:
+    var(--gold);
+}
+
+
+.person-card h3 {
+
+  color:
+    var(--pearl);
+
+  font-size:
+    1.35rem;
+
+  font-weight:
+    900;
+}
+
+
+.person-card p {
+
+  margin-top:
+    4px;
+
+  color:
+    var(--gold-light);
+
+  font-weight:
+    700;
+}
+
+
+.note {
+
+  max-width:
+    850px;
+
+  margin:
+    35px auto 0;
+
+  padding:
+    20px 25px;
+
+  text-align:
+    center;
+
+  color:
+    var(--muted);
+
+  background:
+    rgba(65, 105, 225, 0.07);
+
+  border:
+    1px solid
+    rgba(120, 150, 255, 0.17);
+
+  border-radius:
+    16px;
+}
+
+
+/* =====================================================
+   ACHIEVEMENTS
+===================================================== */
+
+.achievement-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    22px;
+}
+
+
+.achievement-card {
+
+  position:
+    relative;
+
+  padding:
+    40px 28px;
+
+  text-align:
+    center;
+
+  border-radius:
+    23px;
+
+  overflow:
+    hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.achievement-card:hover {
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(214, 179, 106, 0.45);
+}
+
+
+.achievement-number {
+
+  position:
+    absolute;
+
+  top:
+    16px;
+
+  right:
+    20px;
+
+  color:
+    rgba(120, 150, 255, 0.42);
+
+  font-size:
+    0.75rem;
+
+  font-weight:
+    900;
+}
+
+
+.achievement-icon {
+
+  font-size:
+    2.8rem;
+
+  margin-bottom:
+    13px;
+}
+
+
+.achievement-card h3 {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    1.25rem;
+}
+
+
+.achievement-card p {
+
+  margin-top:
+    8px;
+
+  color:
+    var(--muted-dark);
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap:
+    18px;
+}
+
+
+.gallery-item {
+
+  position:
+    relative;
+
+  aspect-ratio:
+    4 / 3;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid
+    rgba(120, 150, 255, 0.28);
+
+  border-radius:
+    21px;
+
+  box-shadow:
+    0 15px 45px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+.gallery-item::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 60%,
+      rgba(2, 8, 23, 0.35)
+    );
+
+  pointer-events:
+    none;
+}
+
+
+.gallery-item img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  transition:
+    transform 0.6s ease;
+}
+
+
+.gallery-item:hover img {
+
+  transform:
+    scale(1.09);
+}
+
+
+.gallery-description {
+
+  max-width:
+    1000px;
+
+  margin:
+    32px auto 0;
+
+  padding:
+    28px;
+
+  text-align:
+    center;
+
+  color:
+    var(--muted);
+
+  border-radius:
+    20px;
+
+  line-height:
+    1.9;
+}
+
+
+.gallery-description p + p {
+
+  margin-top:
+    10px;
+}
+
+
+/* =====================================================
+   EVENTS
+===================================================== */
+
+.event-box {
+
+  max-width:
+    950px;
+
+  margin:
+    auto;
+
+  padding:
+    40px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    30px;
+
+  border-radius:
+    25px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(65, 105, 225, 0.13),
+      rgba(214, 179, 106, 0.06)
+    );
+
+  border-color:
+    rgba(214, 179, 106, 0.35);
+}
+
+
+.event-date {
+
+  width:
+    90px;
+
+  height:
+    90px;
+
+  flex-shrink:
+    0;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid
+    rgba(214, 179, 106, 0.45);
+
+  border-radius:
+    20px;
+
+  color:
+    var(--gold-light);
+
+  background:
+    rgba(65, 105, 225, 0.10);
+
+  font-size:
+    1.1rem;
+
+  font-weight:
+    900;
+}
+
+
+.event-content > span {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    0.76rem;
+
+  font-weight:
+    900;
+}
+
+
+.event-content h3 {
+
+  margin:
+    7px 0;
+
+  color:
+    var(--pearl);
+
+  font-size:
+    clamp(1.8rem, 4vw, 3rem);
+
+  font-weight:
+    900;
+}
+
+
+.event-content p {
+
+  color:
+    var(--muted);
+}
+
+
+/* =====================================================
+   SOCIAL GALLERY
+===================================================== */
+
+.social-gallery {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    22px;
+}
+
+
+.social-card {
+
+  overflow:
+    hidden;
+
+  border-radius:
+    22px;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.social-card:hover {
+
+  transform:
+    translateY(-7px);
+
+  border-color:
+    rgba(214, 179, 106, 0.48);
+}
+
+
+.social-card > img {
+
+  width:
+    100%;
+
+  aspect-ratio:
+    16 / 10;
+
+  object-fit:
+    cover;
+
+  transition:
+    transform 0.6s ease;
+}
+
+
+.social-card:hover > img {
+
+  transform:
+    scale(1.05);
+}
+
+
+.activity-images {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    4px;
+
+  aspect-ratio:
+    16 / 9;
+
+  overflow:
+    hidden;
+}
+
+
+.activity-images img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  min-height:
+    0;
+
+  object-fit:
+    cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.social-card:hover .activity-images img {
+
+  transform:
+    scale(1.035);
+}
+
+
+.social-content {
+
+  padding:
+    21px;
+}
+
+
+.card-label {
+
+  display:
+    inline-block;
+
+  margin-bottom:
+    6px;
+
+  color:
+    rgba(241, 215, 143, 0.75);
+
+  font-size:
+    0.67rem;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.10em;
+}
+
+
+.social-content h3 {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    1.1rem;
+
+  font-weight:
+    900;
+}
+
+
+.social-content p {
+
+  margin-top:
+    6px;
+
+  color:
+    var(--muted-dark);
+
+  font-size:
+    0.89rem;
+
+  line-height:
+    1.7;
+}
+
+
+/* =====================================================
+   OBJECTIVE
+===================================================== */
+
+.objective-section {
+
+  padding-top:
+    65px;
+}
+
+
+.objective-highlight {
+
+  position:
+    relative;
+
+  max-width:
+    1100px;
+
+  margin:
+    auto;
+
+  padding:
+    62px 40px;
+
+  text-align:
+    center;
+
+  overflow:
+    hidden;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(65, 105, 225, 0.18),
+      rgba(214, 179, 106, 0.08)
+    );
+
+  border:
+    1px solid
+    rgba(214, 179, 106, 0.52);
+
+  border-radius:
+    30px;
+
+  box-shadow:
+
+    0 25px 80px
+    rgba(0, 0, 0, 0.38),
+
+    0 0 50px
+    rgba(65, 105, 225, 0.12);
+}
+
+
+.objective-glow {
+
+  position:
+    absolute;
+
+  width:
+    400px;
+
+  height:
+    400px;
+
+  top:
+    -260px;
+
+  left:
+    50%;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(65, 105, 225, 0.20),
+      transparent 70%
+    );
+}
+
+
+.objective-icon {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    1.25rem;
+
+  margin:
+    5px 0 8px;
+}
+
+
+.objective-highlight h2 {
+
+  position:
+    relative;
+
+  color:
+    var(--pearl);
+
+  font-size:
+    clamp(1.8rem, 4vw, 3.15rem);
+
+  line-height:
+    1.45;
+
+  font-weight:
+    900;
+
+  text-shadow:
+    0 3px 16px
+    rgba(0, 0, 0, 0.55);
+}
+
+
+.objective-highlight > p:last-child {
+
+  position:
+    relative;
+
+  max-width:
+    800px;
+
+  margin:
+    20px auto 0;
+
+  color:
+    var(--muted);
+
+  line-height:
+    1.9;
+}
+
+
+/* =====================================================
+   SPONSORS
+===================================================== */
+
+.sponsor-box {
+
+  max-width:
+    900px;
+
+  margin:
+    auto;
+
+  padding:
+    48px;
+
+  text-align:
+    center;
+
+  border-radius:
+    25px;
+}
+
+
+.sponsor-icon {
+
+  color:
+    var(--gold);
+
+  font-size:
+    1.3rem;
+
+  margin-bottom:
+    13px;
+}
+
+
+.sponsor-box p {
+
+  color:
+    var(--muted);
+
+  line-height:
+    1.9;
+}
+
+
+.sponsor-box span {
+
+  display:
+    block;
+
+  margin-top:
+    15px;
+
+  color:
+    var(--gold-light);
+
+  font-weight:
+    700;
+}
+
+
+/* =====================================================
+   PREMIUM INSTAGRAM
+===================================================== */
+
+.instagram-section {
+
+  padding-top:
+    65px;
+
+  padding-bottom:
+    90px;
+}
+
+
+.instagram-card {
+
+  position:
+    relative;
+
+  max-width:
+    1080px;
+
+  margin:
+    auto;
+
+  padding:
+    50px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    42px;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    31px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(8, 20, 48, 0.84),
+      rgba(4, 12, 31, 0.68)
+    );
+
+  border-color:
+    rgba(214, 179, 106, 0.46);
+}
+
+
+.instagram-card::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    400px;
+
+  height:
+    400px;
+
+  top:
+    -220px;
+
+  right:
+    -100px;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(98, 40, 215, 0.18),
+      transparent 70%
+    );
+
+  pointer-events:
+    none;
+}
+
+
+.instagram-card::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    300px;
+
+  height:
+    300px;
+
+  bottom:
+    -190px;
+
+  left:
+    -100px;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(214, 179, 106, 0.10),
+      transparent 70%
+    );
+
+  pointer-events:
+    none;
+}
+
+
+/* =====================================================
+   INSTAGRAM LOGO
+===================================================== */
+
+.instagram-logo {
+
+  position:
+    relative;
+
+  width:
+    150px;
+
+  height:
+    150px;
+
+  min-width:
+    150px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    43px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #f9ce34 0%,
+      #ee2a7b 42%,
+      #6228d7 72%,
+      #285aeb 100%
+    );
+
+  box-shadow:
+
+    0 0 0 8px
+    rgba(214, 179, 106, 0.05),
+
+    0 0 50px
+    rgba(98, 40, 215, 0.32),
+
+    0 22px 55px
+    rgba(0, 0, 0, 0.42);
+
+  animation:
+    instagramGlow 4s ease-in-out infinite;
+}
+
+
+.instagram-logo-inner {
+
+  position:
+    relative;
+
+  width:
+    78px;
+
+  height:
+    78px;
+
+  border:
+    6px solid white;
+
+  border-radius:
+    24px;
+}
+
+
+.instagram-logo-inner::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    30px;
+
+  height:
+    30px;
+
+  top:
+    50%;
+
+  left:
+    50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border:
+    5px solid white;
+
+  border-radius:
+    50%;
+}
+
+
+.instagram-camera-dot {
+
+  position:
+    absolute;
+
+  width:
+    10px;
+
+  height:
+    10px;
+
+  top:
+    9px;
+
+  right:
+    9px;
+
+  background:
+    white;
+
+  border-radius:
+    50%;
+}
+
+
+/* =====================================================
+   INSTAGRAM CONTENT
+===================================================== */
+
+.instagram-content {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  flex:
+    1;
+}
+
+
+.instagram-content h2 {
+
+  margin:
+    6px 0 14px;
+
+  color:
+    var(--pearl);
+
+  font-size:
+    clamp(1.8rem, 4vw, 2.8rem);
+
+  line-height:
+    1.4;
+
+  font-weight:
+    900;
+
+  text-shadow:
+    0 3px 18px
+    rgba(0, 0, 0, 0.55);
+}
+
+
+.instagram-content > p:not(.eyebrow) {
+
+  max-width:
+    760px;
+
+  margin-bottom:
+    25px;
+
+  color:
+    var(--muted);
+
+  font-size:
+    0.98rem;
+
+  line-height:
+    1.9;
+}
+
+
+/* =====================================================
+   INSTAGRAM BUTTON
+===================================================== */
+
+.instagram-btn {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
+
+  min-height:
+    59px;
+
+  padding:
+    10px 17px;
+
+  color:
+    var(--pearl);
+
+  text-decoration:
+    none;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(65, 105, 225, 0.25),
+      rgba(7, 18, 43, 0.82)
+    );
+
+  border:
+    1px solid
+    rgba(214, 179, 106, 0.62);
+
+  border-radius:
+    16px;
+
+  box-shadow:
+
+    0 12px 35px
+    rgba(0, 0, 0, 0.28),
+
+    inset
+    0 1px 0
+    rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.instagram-btn:hover {
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    var(--gold-light);
+
+  box-shadow:
+
+    0 18px 45px
+    rgba(0, 0, 0, 0.35),
+
+    0 0 30px
+    rgba(65, 105, 225, 0.22);
+}
+
+
+.instagram-btn-icon {
+
+  width:
+    36px;
+
+  height:
+    36px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    10px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #f9ce34,
+      #ee2a7b,
+      #6228d7
+    );
+}
+
+
+.instagram-btn-icon svg {
+
+  width:
+    23px;
+
+  height:
+    23px;
+
+  fill:
+    none;
+
+  stroke:
+    white;
+
+  stroke-width:
+    1.8;
+}
+
+
+.instagram-btn-icon .instagram-dot {
+
+  fill:
+    white;
+
+  stroke:
+    none;
+}
+
+
+.instagram-btn-text {
+
+  font-weight:
+    800;
+}
+
+
+.instagram-btn strong {
+
+  color:
+    var(--gold-light);
+
+  font-weight:
+    900;
+}
+
+
+.instagram-arrow {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    1.3rem;
+}
+
+
+/* =====================================================
+   FLOATING INSTAGRAM
+===================================================== */
+
+.floating-instagram {
+
+  position:
+    fixed;
+
+  right:
+    22px;
+
+  bottom:
+    22px;
+
+  z-index:
+    900;
+
+  width:
+    58px;
+
+  height:
+    58px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    2px solid
+    rgba(255, 255, 255, 0.80);
+
+  border-radius:
+    17px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #f9ce34,
+      #ee2a7b 45%,
+      #6228d7 75%,
+      #285aeb
+    );
+
+  box-shadow:
+
+    0 12px 35px
+    rgba(0, 0, 0, 0.38),
+
+    0 0 30px
+    rgba(98, 40, 215, 0.25);
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.floating-instagram svg {
+
+  width:
+    31px;
+
+  height:
+    31px;
+
+  fill:
+    none;
+
+  stroke:
+    white;
+
+  stroke-width:
+    1.8;
+}
+
+
+.floating-instagram .instagram-dot {
+
+  fill:
+    white;
+
+  stroke:
+    none;
+}
+
+
+.floating-instagram:hover {
+
+  transform:
+    translateY(-5px)
+    scale(1.05);
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    22px;
+}
+
+
+.contact-card {
+
+  padding:
+    32px;
+
+  border-radius:
+    22px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.contact-card:hover {
+
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(214, 179, 106, 0.40);
+}
+
+
+.contact-icon {
+
+  display:
+    inline-flex;
+
+  width:
+    45px;
+
+  height:
+    45px;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  margin-bottom:
+    14px;
+
+  color:
+    var(--gold-light);
+
+  background:
+    rgba(65, 105, 225, 0.13);
+
+  border:
+    1px solid
+    rgba(214, 179, 106, 0.30);
+
+  border-radius:
+    50%;
+
+  font-size:
+    1.2rem;
+}
+
+
+.contact-card h3 {
+
+  color:
+    var(--pearl);
+
+  margin-bottom:
+    9px;
+
+  font-size:
+    1.12rem;
+}
+
+
+.contact-card p,
+.contact-card a {
+
+  color:
+    var(--muted);
+
+  line-height:
+    1.8;
+
+  text-decoration:
+    none;
+
+  word-break:
+    break-word;
+}
+
+
+.contact-card a:hover {
+
+  color:
+    var(--gold-light);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+  padding:
+    60px 24px;
+
+  text-align:
+    center;
+
+  background:
+    rgba(2, 8, 23, 0.78);
+
+  border-top:
+    1px solid
+    rgba(120, 150, 255, 0.18);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+}
+
+
+.footer-inner {
+
+  max-width:
+    800px;
+
+  margin:
+    auto;
+}
+
+
+.footer-logo-wrap {
+
+  width:
+    82px;
+
+  height:
+    82px;
+
+  margin:
+    0 auto 15px;
+
+  padding:
+    3px;
+
+  border:
+    1px solid
+    var(--gold);
+
+  border-radius:
+    50%;
+}
+
+
+.footer-logo {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  border-radius:
+    50%;
+}
+
+
+.footer-inner h3 {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    1.4rem;
+
+  font-weight:
+    900;
+}
+
+
+.footer-inner p {
+
+  margin-top:
+    5px;
+
+  color:
+    var(--muted-dark);
+
+  font-size:
+    0.88rem;
+}
+
+
+.footer-instagram {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  margin-top:
+    17px;
+
+  color:
+    var(--gold-light);
+
+  text-decoration:
+    none;
+
+  font-weight:
+    800;
+}
+
+
+.footer-instagram:hover {
+
+  text-decoration:
+    underline;
+}
+
+
+.footer-instagram-icon {
+
+  font-size:
+    1.25rem;
+}
+
+
+.footer-line {
+
+  width:
+    100px;
+
+  height:
+    1px;
+
+  margin:
+    25px auto 17px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+}
+
+
+.copyright {
+
+  margin-top:
+    0 !important;
+
+  font-size:
+    0.78rem !important;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes luxuryPulse {
+
+  0%,
+  100% {
+
+    transform:
+      scale(1);
+
+    box-shadow:
+
+      0 0 0 4px
+      rgba(214, 179, 106, 0.06),
+
+      0 0 28px
+      rgba(65, 105, 225, 0.24);
+  }
+
+  50% {
+
+    transform:
+      scale(1.025);
+
+    box-shadow:
+
+      0 0 0 7px
+      rgba(214, 179, 106, 0.10),
+
+      0 0 43px
+      rgba(65, 105, 225, 0.40);
+  }
+
+}
+
+
+@keyframes instagramGlow {
+
+  0%,
+  100% {
+
+    transform:
+      scale(1);
+
+    filter:
+      brightness(1);
+  }
+
+  50% {
+
+    transform:
+      scale(1.035);
+
+    filter:
+      brightness(1.10);
+  }
+
+}
+
+
+@keyframes loaderMove {
+
+  0% {
+
+    transform:
+      translateX(-100%);
+  }
+
+  100% {
+
+    transform:
+      translateX(220%);
+  }
+
+}
+
+
+/* =====================================================
+   LARGE TABLETS
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .nav-inner {
+
+    padding:
+      10px 20px;
+  }
+
+
+  nav a {
+
+    padding:
+      8px 7px;
+
+    font-size:
+      0.75rem;
+  }
+
+
+  .facts {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+
+  .gallery {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .social-gallery {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .social-card.wide {
+
+    grid-column:
+      span 2;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE NAV
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .menu {
+
+    display:
+      block;
+  }
+
+
+  nav {
+
+    position:
+      absolute;
+
+    top:
+      76px;
+
+    left:
+      14px;
+
+    right:
+      14px;
+
+    display:
+      none;
+
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+
+    padding:
+      12px;
+
+    background:
+      rgba(3, 11, 30, 0.97);
+
+    border:
+      1px solid
+      rgba(120, 150, 255, 0.28);
+
+    border-radius:
+      19px;
+
+    box-shadow:
+      0 25px 60px
+      rgba(0, 0, 0, 0.50);
+
+    backdrop-filter:
+      blur(22px);
+
+    -webkit-backdrop-filter:
+      blur(22px);
+  }
+
+
+  nav.open {
+
+    display:
+      flex;
+  }
+
+
+  nav a {
+
+    width:
+      100%;
+
+    padding:
+      12px 15px;
+
+    text-align:
+      center;
+
+    font-size:
+      0.9rem;
+  }
+
+
+  nav a::after {
+
+    display:
+      none;
+  }
+
+
+  .nav-inner {
+
+    position:
+      relative;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  html {
+
+    scroll-padding-top:
+      82px;
+  }
+
+
+  body::before {
+
+    position:
+      fixed;
+
+    inset:
+      0;
+
+    width:
+      100%;
+
+    height:
+      100%;
+
+    background-image:
+
+      linear-gradient(
+        180deg,
+        rgba(2, 8, 23, 0.24),
+        rgba(2, 8, 23, 0.48)
+      ),
+
+      url("./chi.jpg");
+
+    background-position:
+      center center;
+
+    background-repeat:
+      no-repeat;
+
+    background-size:
+      cover;
+  }
+
+
+  .nav-inner {
+
+    padding:
+      9px 15px;
+  }
+
+
+  .brand-logo {
+
+    width:
+      51px;
+
+    height:
+      51px;
+  }
+
+
+  .brand-name {
+
+    font-size:
+      0.92rem;
+  }
+
+
+  .brand-text small {
+
+    font-size:
+      0.58rem;
+  }
+
+
+  .hero {
+
+    min-height:
+      calc(100vh - 70px);
+
+    padding:
+      55px 15px;
+  }
+
+
+  .hero-content {
+
+    padding:
+      42px 20px;
+
+    border-radius:
+      26px;
+  }
+
+
+  .hero-logo-ring {
+
+    width:
+      125px;
+
+    height:
+      125px;
+  }
+
+
+  .hero h1 {
+
+    font-size:
+      clamp(2.1rem, 10vw, 3.4rem);
+  }
+
+
+  .hero-description {
+
+    font-size:
+      0.9rem;
+  }
+
+
+  .hero-badges span {
+
+    min-width:
+      105px;
+  }
+
+
+  .hero-meta {
+
+    flex-direction:
+      column;
+  }
+
+
+  .intro {
+
+    grid-template-columns:
+      1fr;
+
+    padding:
+      70px 15px;
+
+    gap:
+      25px;
+  }
+
+
+  .intro-copy {
+
+    padding:
+      31px 22px;
+  }
+
+
+  .intro-copy h2 {
+
+    font-size:
+      2rem;
+  }
+
+
+  .facts {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .quote-card {
+
+    min-height:
+      400px;
+  }
+
+
+  .quote-card img {
+
+    min-height:
+      400px;
+  }
+
+
+  .section {
+
+    padding:
+      75px 15px;
+  }
+
+
+  .section.dark {
+
+    padding-left:
+      15px;
+
+    padding-right:
+      15px;
+  }
+
+
+  .section-heading {
+
+    margin-bottom:
+      34px;
+  }
+
+
+  .section-heading h2 {
+
+    font-size:
+      2rem;
+  }
+
+
+  .two-col {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      25px;
+  }
+
+
+  .values {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .cards {
+
+    grid-template-columns:
+      1fr;
+
+    max-width:
+      370px;
+
+    margin:
+      auto;
+  }
+
+
+  .achievement-grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .gallery {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap:
+      10px;
+  }
+
+
+  .social-gallery {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .social-card.wide {
+
+    grid-column:
+      auto;
+  }
+
+
+  .event-box {
+
+    padding:
+      30px 22px;
+  }
+
+
+  .objective-highlight {
+
+    padding:
+      45px 22px;
+  }
+
+
+  .sponsor-box {
+
+    padding:
+      34px 22px;
+  }
+
+
+  /* INSTAGRAM */
+
+  .instagram-card {
+
+    flex-direction:
+      column;
+
+    text-align:
+      center;
+
+    gap:
+      28px;
+
+    padding:
+      38px 21px;
+
+    border-radius:
+      25px;
+  }
+
+
+  .instagram-logo {
+
+    width:
+      125px;
+
+    height:
+      125px;
+
+    min-width:
+      125px;
+
+    border-radius:
+      36px;
+  }
+
+
+  .instagram-logo-inner {
+
+    width:
+      67px;
+
+    height:
+      67px;
+
+    border-width:
+      5px;
+
+    border-radius:
+      20px;
+  }
+
+
+  .instagram-logo-inner::before {
+
+    width:
+      26px;
+
+    height:
+      26px;
+
+    border-width:
+      4px;
+  }
+
+
+  .instagram-content h2 {
+
+    font-size:
+      1.7rem;
+  }
+
+
+  .instagram-content > p:not(.eyebrow) {
+
+    font-size:
+      0.9rem;
+
+    line-height:
+      1.8;
+  }
+
+
+  .instagram-btn {
+
+    width:
+      100%;
+
+    justify-content:
+      center;
+
+    flex-wrap:
+      wrap;
+  }
+
+
+  .contact-grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .floating-instagram {
+
+    width:
+      53px;
+
+    height:
+      53px;
+
+    right:
+      16px;
+
+    bottom:
+      16px;
+
+    border-radius:
+      15px;
+  }
+
+
+  .floating-instagram svg {
+
+    width:
+      28px;
+
+    height:
+      28px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .brand-name {
+
+    font-size:
+      0.83rem;
+  }
+
+
+  .brand-text small {
+
+    display:
+      none;
+  }
+
+
+  .hero {
+
+    padding:
+      45px 12px;
+  }
+
+
+  .hero-content {
+
+    padding:
+      35px 16px;
+  }
+
+
+  .hero-logo-ring {
+
+    width:
+      108px;
+
+    height:
+      108px;
+  }
+
+
+  .hero h1 {
+
+    font-size:
+      2rem;
+  }
+
+
+  .hero-subtitle {
+
+    font-size:
+      1.05rem;
+  }
+
+
+  .hero-badges {
+
+    gap:
+      7px;
+  }
+
+
+  .hero-badges span {
+
+    min-width:
+      90px;
+
+    padding:
+      8px 7px;
+  }
+
+
+  .facts {
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .fact:last-child {
+
+    grid-column:
+      span 2;
+  }
+
+
+  .gallery {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .activity-images {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    aspect-ratio:
+      1 / 1;
+  }
+
+
+  .social-content {
+
+    padding:
+      18px;
+  }
+
+
+  .event-box {
+
+    flex-direction:
+      column;
+
+    text-align:
+      center;
+  }
+
+
+  .instagram-logo {
+
+    width:
+      112px;
+
+    height:
+      112px;
+
+    min-width:
+      112px;
+  }
+
+
+  .instagram-content h2 {
+
+    font-size:
+      1.55rem;
+  }
+
+
+  .instagram-btn {
+
+    display:
+      grid;
+
+    grid-template-columns:
+      auto 1fr auto;
+
+    text-align:
+      left;
+
+    gap:
+      6px 8px;
+  }
+
+
+  .instagram-btn-icon {
+
+    grid-row:
+      1 / span 2;
+  }
+
+
+  .instagram-btn-text {
+
+    grid-column:
+      2;
+
+    grid-row:
+      1;
+
+    font-size:
+      0.78rem;
+  }
+
+
+  .instagram-btn strong {
+
+    grid-column:
+      2;
+
+    grid-row:
+      2;
+
+    font-size:
+      0.75rem;
+  }
+
+
+  .instagram-arrow {
+
+    grid-column:
+      3;
+
+    grid-row:
+      1 / span 2;
+  }
+
+
+  .footer-instagram {
+
+    font-size:
+      0.82rem;
+  }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior:
+      auto;
+  }
+
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+  }
+
+}
