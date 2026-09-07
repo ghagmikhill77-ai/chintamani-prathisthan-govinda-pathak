@@ -2,13 +2,25 @@
 <html lang="mr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>चिंतामणी प्रतिष्ठान | चिंचपोकळी</title>
 
   <meta
     name="description"
     content="चिंतामणी प्रतिष्ठान, चिंचपोकळी — स्थापना २०११. एकता, शिस्त, परंपरा आणि जिद्द."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
   >
 
   <link rel="stylesheet" href="style.css">
@@ -24,31 +36,33 @@
 
   <div class="nav-inner">
 
-    <a class="brand" href="#home">
+    <a href="#home" class="brand">
 
       <img
-        class="brand-logo"
-        src="./logo.jpeg"
+        src="logo.jpeg"
         alt="चिंतामणी प्रतिष्ठान लोगो"
+        class="brand-logo"
       >
 
-      <div class="brand-name">
-        <strong>चिंतामणी प्रतिष्ठान</strong>
-        <span>चिंचपोकळी • स्थापना २०११</span>
-      </div>
+      <span class="brand-name">
+        चिंतामणी प्रतिष्ठान
+      </span>
 
     </a>
 
     <button
       class="menu"
-      aria-label="मेनू"
       type="button"
+      aria-label="मेनू उघडा"
       aria-expanded="false"
+      aria-controls="site-nav"
     >
-      ☰
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
-    <nav>
+    <nav id="site-nav">
 
       <a href="#home">मुख्यपृष्ठ</a>
       <a href="#about">आमच्याबद्दल</a>
@@ -60,6 +74,7 @@
       <a href="#social">शैक्षणिक</a>
       <a href="#events">उपक्रम</a>
       <a href="#sponsors">प्रायोजक</a>
+      <a href="#instagram">Instagram</a>
       <a href="#contact">संपर्क</a>
 
     </nav>
@@ -69,83 +84,58 @@
 </header>
 
 
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main>
 
 <!-- =====================================================
-     HOME
+     HERO
 ===================================================== -->
 
 <section id="home" class="hero">
 
   <div class="hero-content">
 
-    <div class="hero-top-line"></div>
-
     <p class="eyebrow">
-      एकता <span>|</span> शिस्त <span>|</span> परंपरा <span>|</span> जिद्द
+      एकता&nbsp; | &nbsp;शिस्त&nbsp; | &nbsp;परंपरा&nbsp; | &nbsp;जिद्द
     </p>
 
-    <div class="hero-logo-wrap">
-
-      <div class="logo-ring ring-one"></div>
-      <div class="logo-ring ring-two"></div>
-
-      <img
-        class="hero-logo"
-        src="./logo.jpeg"
-        alt="चिंतामणी प्रतिष्ठान"
-      >
-
-    </div>
+    <img
+      src="logo.jpeg"
+      alt="चिंतामणी प्रतिष्ठान"
+      class="hero-logo"
+    >
 
     <h1>
       चिंतामणी प्रतिष्ठान
     </h1>
 
-    <p class="hero-subtitle">
-      चिंचपोकळीचे अभिमानाचे गोविंदा पथक
-    </p>
+    <div class="hero-line"></div>
 
-    <div class="meta">
-
-      <span>📍 चिंचपोकळी</span>
-
-      <i></i>
-
-      <span>🗓️ स्थापना २०११</span>
-
-    </div>
-
-    <div class="hero-divider">
-      <span></span>
-      <b>८ थरवाले</b>
-      <span></span>
+    <div class="hero-meta">
+      <span>चिंचपोकळी</span>
+      <span class="separator">◆</span>
+      <span>स्थापना २०११</span>
     </div>
 
     <p class="hero-marathi">
       गोविंदा आला रे आला...<br>
-      <strong>परंपरा, शिस्त आणि जिद्दीची ओळख</strong>
+      <strong>८ थरवाले</strong>
     </p>
 
     <div class="buttons">
 
-      <a
-        class="btn primary"
-        href="#about"
-      >
-        आमचा प्रवास <span>→</span>
+      <a href="#about" class="btn primary">
+        आमच्याबद्दल
       </a>
 
-      <a
-        class="btn secondary"
-        href="#contact"
-      >
+      <a href="#contact" class="btn secondary">
         संपर्क करा
       </a>
 
     </div>
-
-    <div class="hero-bottom-line"></div>
 
   </div>
 
@@ -168,57 +158,51 @@
       चिंतामणी प्रतिष्ठान
     </h2>
 
-    <div class="heading-line"></div>
-
     <p>
-      चिंचपोकळी येथे २०११ साली स्थापन झालेले
-      चिंतामणी प्रतिष्ठान गोविंदा पथक आज महाराष्ट्रातील
-      सर्वांत यशस्वी गोविंदा पथकांपैकी एक मानले जाते.
-      दहीहंडीच्या उत्सवातून संघभावना, शिस्त आणि परंपरा
-      जपतानाच हे पथक समाजसेवेच्या कार्यातही सक्रिय आहे.
+      चिंचपोकळीच्या मातीतून एकता, शिस्त, परंपरा आणि
+      जिद्दीच्या बळावर उभे राहिलेले चिंतामणी प्रतिष्ठान
+      हे सामाजिक बांधिलकी आणि गोविंदा संस्कृतीची जपणूक
+      करणारे प्रतिष्ठान आहे.
     </p>
 
     <p>
-      सरावापासून दहीहंडीच्या उत्सवापर्यंत प्रत्येक सदस्याची
-      मेहनत, जिद्द आणि एकजुटीची ही कहाणी आहे.
-      आमचे पथक समाजाचा अभिन्न भाग बनून विविध सामाजिक
-      उपक्रम राबवत आहे.
+      समाजसेवा, क्रीडा, पर्यावरण संवर्धन, आरोग्यविषयक
+      उपक्रम आणि गोविंदा पथकाच्या माध्यमातून समाजाशी
+      असलेले नाते अधिक दृढ करण्याचा आमचा सतत प्रयत्न आहे.
     </p>
 
     <div class="facts">
 
       <div class="fact">
-        <b>२०११</b>
-        <small>स्थापना</small>
+        <strong>२०११</strong>
+        <span>स्थापना</span>
       </div>
 
       <div class="fact">
-        <b>चिंचपोकळी</b>
-        <small>ठिकाण</small>
+        <strong>चिंचपोकळी</strong>
+        <span>ठिकाण</span>
       </div>
 
       <div class="fact">
-        <b>नरेश तोरस्कर</b>
-        <small>संस्थापक व अध्यक्ष</small>
+        <strong>नरेश तोरस्कर</strong>
+        <span>संस्थापक व अध्यक्ष</span>
       </div>
 
       <div class="fact">
-        <b>संतोष राऊत</b>
-        <small>उपाध्यक्ष</small>
+        <strong>संतोष राऊत</strong>
+        <span>उपाध्यक्ष</span>
       </div>
 
       <div class="fact">
-        <b>गौरव खणकर</b>
-        <small>गोविंदा पथकप्रमुख</small>
+        <strong>गौरव खणकर</strong>
+        <span>गोविंदा पथकप्रमुख</span>
       </div>
 
     </div>
 
-    <a
-      class="dark-btn"
-      href="#about"
-    >
-      अधिक जाणून घ्या <span>→</span>
+    <a href="#about" class="dark-btn">
+      अधिक जाणून घ्या
+      <span>→</span>
     </a>
 
   </div>
@@ -227,24 +211,19 @@
   <div class="quote-card">
 
     <img
-      src="./cp8.jpeg"
-      alt="गोविंदा पथकाची मानवी मनोरा रचना"
+      src="cp8.jpeg"
+      alt="चिंतामणी प्रतिष्ठान गोविंदा पथक"
+      loading="lazy"
     >
 
     <div class="quote-overlay">
 
-      <div class="quote-content">
-
-        <span class="quote-mark">“</span>
-
-        <p>
-          एकता आमची ताकद<br>
-          परंपरा आमची ओळख<br>
-          चिंचपोकळीची शान,<br>
-          <strong>चिंतामणी प्रतिष्ठान!</strong>
-        </p>
-
-      </div>
+      <p>
+        एकता आमची ताकद<br>
+        परंपरा आमची ओळख<br>
+        चिंचपोकळीची शान,<br>
+        <strong>चिंतामणी प्रतिष्ठान!</strong>
+      </p>
 
     </div>
 
@@ -257,109 +236,71 @@
      ABOUT
 ===================================================== -->
 
-<section
-  id="about"
-  class="section about"
->
+<section id="about" class="section dark">
 
-  <div class="section-heading">
+  <p class="eyebrow">
+    आमचा प्रवास
+  </p>
 
-    <p class="eyebrow">
-      आमचा प्रवास
-    </p>
-
-    <h2>
-      परंपरेसोबत प्रगतीची वाटचाल
-    </h2>
-
-  </div>
+  <h2>
+    परंपरेसोबत प्रगतीची वाटचाल
+  </h2>
 
   <div class="two-col">
 
-    <div class="about-box">
-
-      <div class="box-number">
-        ०१
-      </div>
+    <div class="about-copy">
 
       <h3>
         आमची ओळख
       </h3>
 
       <p>
-        २०११ पासून चिंचपोकळीच्या मातीतून
-        चिंतामणी प्रतिष्ठान गोविंदा पथकाने अनेक
-        उत्सवांना रंग दिला आहे.
+        चिंतामणी प्रतिष्ठान हे केवळ गोविंदा पथक नसून
+        सामाजिक बांधिलकी, संस्कृती, क्रीडा आणि सेवाभाव
+        यांचा सुंदर संगम आहे.
       </p>
 
       <p>
-        दहीहंडी हा केवळ उत्सव नसून संघभावना,
-        विश्वास, परिश्रम आणि एकमेकांना साहाय्य
-        करण्याचा संदेश आहे.
+        प्रत्येक उपक्रमातून समाजासाठी काहीतरी सकारात्मक
+        करण्याचा आणि पुढील पिढीपर्यंत आपली परंपरा
+        अभिमानाने पोहोचवण्याचा आमचा प्रयत्न आहे.
       </p>
 
     </div>
 
 
-    <div class="values-box">
+    <div class="values">
 
-      <div class="box-number">
-        ०२
+      <div class="value">
+        <span>०१</span>
+        <h3>एकता</h3>
+        <p>
+          एकत्र येऊन मोठी स्वप्ने साकारण्याची ताकद.
+        </p>
       </div>
 
-      <h3>
-        आमची मूल्ये
-      </h3>
+      <div class="value">
+        <span>०२</span>
+        <h3>शिस्त</h3>
+        <p>
+          प्रत्येक यशामागे शिस्तीचा मजबूत पाया.
+        </p>
+      </div>
 
-      <div class="values">
+      <div class="value">
+        <span>०३</span>
+        <h3>परंपरा</h3>
+        <p>
+          संस्कृती आणि गोविंदा परंपरेचा अभिमान.
+        </p>
+      </div>
 
-        <div class="value-item">
-
-          <span class="value-icon">01</span>
-
-          <div>
-            <b>एकता</b>
-            <span>एकत्र येऊन उंच भरारी</span>
-          </div>
-
-        </div>
-
-
-        <div class="value-item">
-
-          <span class="value-icon">02</span>
-
-          <div>
-            <b>शिस्त</b>
-            <span>सराव आणि सुरक्षिततेला प्राधान्य</span>
-          </div>
-
-        </div>
-
-
-        <div class="value-item">
-
-          <span class="value-icon">03</span>
-
-          <div>
-            <b>परंपरा</b>
-            <span>महाराष्ट्राची संस्कृती जपणे</span>
-          </div>
-
-        </div>
-
-
-        <div class="value-item">
-
-          <span class="value-icon">04</span>
-
-          <div>
-            <b>जिद्द</b>
-            <span>प्रत्येक आव्हानाला सामोरे जाणे</span>
-          </div>
-
-        </div>
-
+      <div class="value">
+        <span>०४</span>
+        <h3>जिद्द</h3>
+        <p>
+          अडचणींवर मात करून पुढे जाण्याची जिद्द.
+        </p>
       </div>
 
     </div>
@@ -373,102 +314,71 @@
      TEAM
 ===================================================== -->
 
-<section
-  id="team"
-  class="section team-section"
->
+<section id="team" class="section">
 
-  <div class="section-heading">
+  <p class="eyebrow">
+    आमचे पथक
+  </p>
 
-    <p class="eyebrow">
-      आमचे पथक
-    </p>
-
-    <h2>
-      नेतृत्व
-    </h2>
-
-    <p class="section-description">
-      संघाला दिशा देणारे आणि चिंतामणी प्रतिष्ठानची
-      परंपरा पुढे नेणारे नेतृत्व.
-    </p>
-
-  </div>
-
+  <h2>
+    नेतृत्व
+  </h2>
 
   <div class="cards">
 
-    <article class="card leader-card">
+    <article class="person-card">
 
-      <div class="leader-image-wrap">
-
-        <div class="leader-ring"></div>
+      <div class="person-image-wrap">
 
         <img
-          class="member-photo"
-          src="./nt.jpeg"
+          src="nt.jpeg"
           alt="नरेश तोरस्कर"
+          class="person-image"
+          loading="lazy"
         >
 
       </div>
 
-      <div class="card-content">
+      <h3>
+        नरेश तोरस्कर
+      </h3>
 
-        <span class="role-label">
-          संस्थापक
-        </span>
-
-        <h3>
-          नरेश तोरस्कर
-        </h3>
-
-        <p>
-          संस्थापक व अध्यक्ष
-        </p>
-
-      </div>
+      <p>
+        संस्थापक व अध्यक्ष
+      </p>
 
     </article>
 
 
-    <article class="card leader-card">
+    <article class="person-card">
 
-      <div class="leader-image-wrap">
-
-        <div class="leader-ring"></div>
+      <div class="person-image-wrap">
 
         <img
-          class="member-photo"
-          src="./sr.jpeg"
+          src="sr.jpeg"
           alt="संतोष राऊत"
+          class="person-image"
+          loading="lazy"
         >
 
       </div>
 
-      <div class="card-content">
+      <h3>
+        संतोष राऊत
+      </h3>
 
-        <span class="role-label">
-          नेतृत्व
-        </span>
-
-        <h3>
-          संतोष राऊत
-        </h3>
-
-        <p>
-          उपाध्यक्ष
-        </p>
-
-      </div>
+      <p>
+        उपाध्यक्ष
+      </p>
 
     </article>
 
   </div>
 
-
-  <p class="note">
-    लवकरच पथकातील इतर सदस्यांची माहिती येथे जोडली जाईल.
-  </p>
+  <div class="note">
+    एकत्रित नेतृत्व, संघभावना आणि शिस्तीच्या जोरावर
+    चिंतामणी प्रतिष्ठानची वाटचाल सुरू आहे.
+  </div>
 
 </section>
 
@@ -477,83 +387,40 @@
      ACHIEVEMENTS
 ===================================================== -->
 
-<section
-  id="achievements"
-  class="section achievements"
->
+<section id="achievements" class="section dark">
 
-  <div class="section-heading">
+  <p class="eyebrow">
+    यशोगाथा
+  </p>
 
-    <p class="eyebrow">
-      यशोगाथा
-    </p>
-
-    <h2>
-      आमची कामगिरी
-    </h2>
-
-  </div>
-
+  <h2>
+    आमची कामगिरी
+  </h2>
 
   <div class="empty-grid">
 
     <div class="placeholder">
-
-      <span class="achievement-icon">🏆</span>
-
-      <div>
-
-        <h3>
-          उपलब्धी लवकरच
-        </h3>
-
-        <p>
-          दहीहंडी स्पर्धा, क्रमांक आणि पुरस्कारांची
-          माहिती येथे जोडली जाईल.
-        </p>
-
-      </div>
-
+      <span>🏆</span>
+      <h3>यशोगाथा</h3>
+      <p>
+        लवकरच अधिक माहिती येथे उपलब्ध होईल.
+      </p>
     </div>
 
-
     <div class="placeholder">
-
-      <span class="achievement-icon">🥇</span>
-
-      <div>
-
-        <h3>
-          स्मरणीय क्षण
-        </h3>
-
-        <p>
-          पथकाच्या विशेष कामगिरीचे क्षण येथे
-          प्रदर्शित करता येतील.
-        </p>
-
-      </div>
-
+      <span>🥇</span>
+      <h3>सन्मान</h3>
+      <p>
+        लवकरच अधिक माहिती येथे उपलब्ध होईल.
+      </p>
     </div>
 
-
     <div class="placeholder">
-
-      <span class="achievement-icon">📜</span>
-
-      <div>
-
-        <h3>
-          सन्मान
-        </h3>
-
-        <p>
-          प्रमाणपत्रे आणि गौरवांची माहिती येथे
-          जोडता येईल.
-        </p>
-
-      </div>
-
+      <span>📜</span>
+      <h3>पुरस्कार</h3>
+      <p>
+        लवकरच अधिक माहिती येथे उपलब्ध होईल.
+      </p>
     </div>
 
   </div>
@@ -565,86 +432,47 @@
      GALLERY
 ===================================================== -->
 
-<section
-  id="gallery"
-  class="section gallery-section"
->
+<section id="gallery" class="section">
 
-  <div class="section-heading">
+  <p class="eyebrow">
+    चिंतामणी साठी प्रतिष्ठान कडून
+  </p>
 
-    <p class="eyebrow">
-      चिंतामणी साठी प्रतिष्ठान कडून
-    </p>
-
-    <h2>
-      चिंतामणी साठी प्रतिष्ठान कडून
-    </h2>
-
-  </div>
-
+  <h2>
+    चिंतामणी साठी प्रतिष्ठान कडून
+  </h2>
 
   <div class="gallery">
 
     <div class="gallery-item">
-      <img
-        src="./tarafa.jpeg"
-        alt="चिंतामणी प्रतिष्ठान गोविंदा पथक तराफा"
-      >
-      <div class="image-overlay">
-        <span>चिंतामणी प्रतिष्ठान</span>
-      </div>
+      <img src="tarafa.jpeg" alt="हायड्रॉलिक तराफा" loading="lazy">
     </div>
 
-
     <div class="gallery-item">
-      <img
-        src="./tarafa1.jpeg"
-        alt="चिंतामणी प्रतिष्ठान गोविंदा पथक तराफा १"
-      >
-      <div class="image-overlay">
-        <span>तराफा सेवा</span>
-      </div>
+      <img src="tarafa1.jpeg" alt="हायड्रॉलिक तराफा" loading="lazy">
     </div>
 
-
     <div class="gallery-item">
-      <img
-        src="./tarafa2.jpeg"
-        alt="चिंतामणी प्रतिष्ठान गोविंदा पथक तराफा २"
-      >
-      <div class="image-overlay">
-        <span>परंपरा आणि सेवा</span>
-      </div>
+      <img src="tarafa2.jpeg" alt="हायड्रॉलिक तराफा" loading="lazy">
     </div>
 
-
     <div class="gallery-item">
-      <img
-        src="./tarafa3.jpeg"
-        alt="चिंतामणी प्रतिष्ठान गोविंदा पथक तराफा ३"
-      >
-      <div class="image-overlay">
-        <span>चिंतामणीसाठी समर्पण</span>
-      </div>
+      <img src="tarafa3.jpeg" alt="हायड्रॉलिक तराफा" loading="lazy">
     </div>
 
   </div>
 
-
   <div class="gallery-description">
 
     <p>
-      खेळण्या, बागडण्याचा वयात चिंचपोकळीचा चिंतामणीला
-      तराफा अर्पण करणारं चिंचपोकळीतील एकमेव गोविंदा पथक
-      म्हणजेच चिंतामणी प्रतिष्ठान गोविंदा पथक.
+      चिंतामणी प्रतिष्ठानच्या माध्यमातून चिंतामणी
+      उत्सवासाठी आधुनिक आणि सुरक्षित हायड्रॉलिक
+      तराफा उभारण्याचा संकल्प करण्यात आला आहे.
     </p>
 
     <p>
-      २०१५ या वर्षाआधीपर्यंत होणाऱ्या विसर्जनाला
-      चिंतामणीच्या मूर्तीची विटंबना पाहता हे पाऊल
-      चिंतामणी प्रतिष्ठान यांनी चिंतामणी प्रतिष्ठान
-      गोविंदा पथकाच्या सहकार्याने २०१५ साली उचलले होते
-      आणि यशस्वीरीत्या पार पाडले.
+      परंपरेसोबत आधुनिकतेची सांगड घालत हा उपक्रम
+      पुढील पिढीसाठी एक प्रेरणादायी पाऊल ठरेल.
     </p>
 
   </div>
@@ -656,39 +484,28 @@
      EVENTS
 ===================================================== -->
 
-<section
-  id="events"
-  class="section events"
->
+<section id="events" class="section dark">
 
-  <div class="section-heading">
+  <p class="eyebrow">
+    उपक्रम
+  </p>
 
-    <p class="eyebrow">
-      उपक्रम
-    </p>
-
-    <h2>
-      आगामी कार्यक्रम
-    </h2>
-
-  </div>
-
+  <h2>
+    आगामी कार्यक्रम
+  </h2>
 
   <div class="event-box">
 
-    <div class="event-decoration">
-      <span></span>
-      <b>२०२६</b>
-      <span></span>
-    </div>
+    <span class="event-label">
+      आगामी कार्यक्रम
+    </span>
 
     <h3>
       दहीहंडी २०२६
     </h3>
 
     <p>
-      तारीख, वेळ आणि ठिकाणाची माहिती लवकरच
-      जाहीर केली जाईल.
+      कार्यक्रमाची सविस्तर माहिती लवकरच जाहीर करण्यात येईल.
     </p>
 
   </div>
@@ -700,359 +517,232 @@
      SOCIAL ACTIVITIES
 ===================================================== -->
 
-<section
-  id="social"
-  class="section social-section"
->
+<section id="social" class="section">
 
-  <div class="section-heading">
+  <p class="eyebrow">
+    सामाजिक
+  </p>
 
-    <p class="eyebrow">
-      सामाजिक
-    </p>
-
-    <h2>
-      सामाजिक उपक्रम
-    </h2>
-
-    <p class="section-description">
-      उत्सवाबरोबरच समाजासाठी योगदान देण्याची
-      चिंतामणी प्रतिष्ठानची परंपरा.
-    </p>
-
-  </div>
+  <h2>
+    सामाजिक उपक्रम
+  </h2>
 
 
   <div class="social-gallery">
 
-
-    <!-- BLOOD DONATION -->
+    <!-- Blood Donation -->
 
     <article class="social-card">
 
-      <div class="social-image single-image">
+      <img
+        src="samajik.jpeg"
+        alt="रक्तदान शिबीर"
+        loading="lazy"
+      >
 
-        <img
-          src="./samajik.jpeg"
-          alt="चिंतामणी प्रतिष्ठान रक्तदान शिबीर"
-        >
-
-        <span class="image-tag">
-          समाजसेवा
-        </span>
-
-      </div>
-
-      <div class="social-card-content">
-
-        <h3>
-          रक्तदान शिबीर
-        </h3>
-
+      <div class="social-content">
+        <h3>रक्तदान शिबीर</h3>
         <p>
-          थरावर जसे आधार देतो,
-          तसा समाजाला रक्ताचा आधार.
+          रक्तदान हेच जीवनदान.
         </p>
-
       </div>
 
     </article>
 
 
-    <!-- SOCIAL COMMITMENT -->
-
     <article class="social-card">
 
-      <div class="social-image single-image">
+      <img
+        src="samajik1.jpeg"
+        alt="सामाजिक बांधिलकी"
+        loading="lazy"
+      >
 
-        <img
-          src="./samajik1.jpeg"
-          alt="चिंतामणी प्रतिष्ठान सामाजिक उपक्रम"
-        >
-
-        <span class="image-tag">
-          सामाजिक बांधिलकी
-        </span>
-
-      </div>
-
-      <div class="social-card-content">
-
-        <h3>
-          सामाजिक बांधिलकी
-        </h3>
-
+      <div class="social-content">
+        <h3>सामाजिक बांधिलकी</h3>
         <p>
-          समाजासाठी योगदान देण्याची चिंतामणी
-          प्रतिष्ठानची सातत्यपूर्ण परंपरा.
+          समाजासाठी एक पाऊल.
         </p>
-
       </div>
 
     </article>
 
 
-    <!-- SOCIAL SERVICE -->
-
     <article class="social-card">
 
-      <div class="social-image single-image">
+      <img
+        src="samajik2.jpeg"
+        alt="समाजसेवा"
+        loading="lazy"
+      >
 
-        <img
-          src="./samajik2.jpeg"
-          alt="चिंतामणी प्रतिष्ठान सामाजिक सेवा"
-        >
-
-        <span class="image-tag">
-          सेवा
-        </span>
-
-      </div>
-
-      <div class="social-card-content">
-
-        <h3>
-          समाजसेवा
-        </h3>
-
+      <div class="social-content">
+        <h3>समाजसेवा</h3>
         <p>
-          एकता, सहकार्य आणि समाजहिताची भावना
-          जपण्याचा प्रयत्न.
+          सेवेतून समाधान.
         </p>
-
       </div>
 
     </article>
 
 
-    <!-- ENVIRONMENT -->
+    <!-- Environment -->
 
-    <article class="social-card">
+    <article class="social-card wide">
 
       <div class="activity-images">
 
-        <img src="./tr.jpeg" alt="हिरवा निसर्ग आपली जबाबदारी">
-        <img src="./tr1.jpeg" alt="पर्यावरण संवर्धन">
-        <img src="./tr2.jpeg" alt="पर्यावरण संवर्धन उपक्रम">
-        <img src="./tr3.jpeg" alt="हिरवा निसर्ग">
-
-        <span class="image-tag">
-          पर्यावरण
-        </span>
+        <img src="tr.jpeg" alt="वृक्षारोपण" loading="lazy">
+        <img src="tr1.jpeg" alt="वृक्षारोपण" loading="lazy">
+        <img src="tr2.jpeg" alt="वृक्षारोपण" loading="lazy">
+        <img src="tr3.jpeg" alt="वृक्षारोपण" loading="lazy">
 
       </div>
 
-      <div class="social-card-content">
-
-        <h3>
-          हिरवा निसर्ग, आपली जबाबदारी
-        </h3>
-
+      <div class="social-content">
+        <h3>हिरवा निसर्ग, आपली जबाबदारी</h3>
         <p>
-          हिरवा निसर्ग, आपली जबाबदारी.
+          वृक्षारोपण उपक्रम.
         </p>
-
       </div>
 
     </article>
 
 
-    <!-- FOOD DONATION -->
+    <!-- Food Donation -->
 
-    <article class="social-card">
-
-      <div class="activity-images three-images">
-
-        <img src="./eq1.jpeg" alt="चिंतामणी प्रतिष्ठान अन्नदान सेवा">
-        <img src="./eq2.jpeg" alt="टाटा रुग्णालयाजवळ अन्नदान सेवा">
-        <img src="./eq3.jpeg" alt="चिंतामणी प्रतिष्ठान गोविंदा पथक अन्नदान सेवा">
-
-        <span class="image-tag">
-          अन्नदान
-        </span>
-
-      </div>
-
-      <div class="social-card-content">
-
-        <h3>
-          मायेचा घास
-        </h3>
-
-        <p>
-          रुग्णांच्या नातेवाईकांसाठी मायेचा घास -
-          टाटा रुग्णालयाजवळ अन्नदान सेवा,
-          चिंतामणी प्रतिष्ठान गोविंदा पथक.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <!-- EYE CHECKUP -->
-
-    <article class="social-card">
-
-      <div class="activity-images three-images">
-
-        <img src="./eye.jpeg" alt="मोफत नेत्र तपासणी शिबिर">
-        <img src="./eye1.jpeg" alt="मोफत नेत्र तपासणी शिबिर">
-        <img src="./eye2.jpeg" alt="मोफत नेत्र तपासणी शिबिर">
-
-        <span class="image-tag">
-          आरोग्यसेवा
-        </span>
-
-      </div>
-
-      <div class="social-card-content">
-
-        <h3>
-          दृष्टी हीच सृष्टी
-        </h3>
-
-        <p>
-          दृष्टी हीच सृष्टी - मोफत नेत्र तपासणी शिबिर,
-          चिंतामणी प्रतिष्ठान गोविंदा पथक.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <!-- ORPHANAGE -->
-
-    <article class="social-card">
-
-      <div class="activity-images orphanage-images">
-
-        <img src="./ka.jpeg" alt="अनाथ आश्रमातील मदत">
-        <img src="./ka1.jpeg" alt="अनाथ आश्रमातील मदत">
-        <img src="./ka2.jpeg" alt="अनाथ आश्रमातील मदत">
-        <img src="./ka3.jpeg" alt="अनाथ आश्रमातील मदत">
-        <img src="./ka4.jpeg" alt="अनाथ आश्रमातील मदत">
-
-        <span class="image-tag">
-          सेवा
-        </span>
-
-      </div>
-
-      <div class="social-card-content">
-
-        <h3>
-          सेवा हीच खरी भक्ती
-        </h3>
-
-        <p>
-          सेवा हीच खरी भक्ती. चिंतामणीच्या कृपेने
-          अनाथ आश्रमात केलेली छोटीशी मदत.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <!-- BEACH CLEANUP -->
-
-    <article class="social-card">
-
-      <div class="activity-images three-images">
-
-        <img src="./b.jpeg" alt="बीच स्वच्छता अभियान">
-        <img src="./b1.jpeg" alt="बीच स्वच्छता अभियान">
-        <img src="./b2.jpeg" alt="बीच स्वच्छता अभियान">
-
-        <span class="image-tag">
-          स्वच्छता
-        </span>
-
-      </div>
-
-      <div class="social-card-content">
-
-        <h3>
-          समुद्रकिनारा आपला,
-          स्वच्छता आपली जबाबदारी
-        </h3>
-
-        <p>
-          समुद्रकिनारा आपला, स्वच्छता आपली जबाबदारी -
-          बीच स्वच्छता अभियान, चिंतामणी प्रतिष्ठान.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <!-- WHEEL CHAIR -->
-
-    <article class="social-card">
+    <article class="social-card wide">
 
       <div class="activity-images">
 
-        <img src="./ad.jpeg" alt="दिव्यांग बांधवांना मोफत व्हील चेअर वाटप">
-        <img src="./ad1.jpeg" alt="दिव्यांग बांधवांना मोफत व्हील चेअर वाटप">
-        <img src="./ad2.jpeg" alt="दिव्यांग बांधवांना मोफत व्हील चेअर वाटप">
-        <img src="./ad3.jpeg" alt="दिव्यांग बांधवांना मोफत व्हील चेअर वाटप">
-
-        <span class="image-tag">
-          मदतीचा हात
-        </span>
+        <img src="eq1.jpeg" alt="अन्नदान सेवा" loading="lazy">
+        <img src="eq2.jpeg" alt="अन्नदान सेवा" loading="lazy">
+        <img src="eq3.jpeg" alt="अन्नदान सेवा" loading="lazy">
 
       </div>
 
-      <div class="social-card-content">
-
-        <h3>
-          सेवेचे पाऊल, आधाराचे हात
-        </h3>
-
+      <div class="social-content">
+        <h3>मायेचा घास - अन्नदान सेवा</h3>
         <p>
-          सेवेचे पाऊल, आधाराचे हात -
-          दिव्यांग बांधवांना मोफत व्हील चेअर वाटप,
-          चिंतामणी प्रतिष्ठान गोविंदा पथक.
+          टाटा रुग्णालयाजवळ रुग्णांच्या नातेवाईकांसाठी
+          अन्नदान सेवा.
         </p>
-
       </div>
 
     </article>
 
 
-    <!-- KABADDI -->
+    <!-- Eye Camp -->
 
-    <article class="social-card">
+    <article class="social-card wide">
 
-      <div class="activity-images kabaddi-images">
+      <div class="activity-images">
 
-        <img src="./cp.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-        <img src="./cp2.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-        <img src="./cp3.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-        <img src="./c4.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-        <img src="./cp5.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-        <img src="./cp6.jpeg" alt="चिंतामणी प्रतिष्ठान कबड्डी संघ">
-
-        <span class="image-tag">
-          क्रीडा
-        </span>
+        <img src="eye.jpeg" alt="नेत्र तपासणी" loading="lazy">
+        <img src="eye1.jpeg" alt="नेत्र तपासणी" loading="lazy">
+        <img src="eye2.jpeg" alt="नेत्र तपासणी" loading="lazy">
 
       </div>
 
-      <div class="social-card-content">
-
-        <h3>
-          मातीतली ताकद, मैदानातला दरारा
-        </h3>
-
+      <div class="social-content">
+        <h3>दृष्टी हीच सृष्टी</h3>
         <p>
-          मातीतली ताकद, मैदानातला दरारा -
-          चिंतामणी प्रतिष्ठान कबड्डी संघ.
+          मोफत नेत्र तपासणी शिबिर.
         </p>
+      </div>
 
+    </article>
+
+
+    <!-- Orphanage -->
+
+    <article class="social-card wide">
+
+      <div class="activity-images">
+
+        <img src="ka.jpeg" alt="अनाथालय सेवा" loading="lazy">
+        <img src="ka1.jpeg" alt="अनाथालय सेवा" loading="lazy">
+        <img src="ka2.jpeg" alt="अनाथालय सेवा" loading="lazy">
+        <img src="ka3.jpeg" alt="अनाथालय सेवा" loading="lazy">
+        <img src="ka4.jpeg" alt="अनाथालय सेवा" loading="lazy">
+
+      </div>
+
+      <div class="social-content">
+        <h3>सेवा हीच खरी भक्ती</h3>
+        <p>
+          अनाथालयातील सेवाभावी उपक्रम.
+        </p>
+      </div>
+
+    </article>
+
+
+    <!-- Beach Cleanup -->
+
+    <article class="social-card wide">
+
+      <div class="activity-images">
+
+        <img src="b.jpeg" alt="बीच स्वच्छता अभियान" loading="lazy">
+        <img src="b1.jpeg" alt="बीच स्वच्छता अभियान" loading="lazy">
+        <img src="b2.jpeg" alt="बीच स्वच्छता अभियान" loading="lazy">
+
+      </div>
+
+      <div class="social-content">
+        <h3>बीच स्वच्छता अभियान</h3>
+        <p>
+          स्वच्छ समुद्रकिनारा, सुंदर पर्यावरण.
+        </p>
+      </div>
+
+    </article>
+
+
+    <!-- Wheelchair -->
+
+    <article class="social-card wide">
+
+      <div class="activity-images">
+
+        <img src="ad.jpeg" alt="व्हील चेअर वाटप" loading="lazy">
+        <img src="ad1.jpeg" alt="व्हील चेअर वाटप" loading="lazy">
+        <img src="ad2.jpeg" alt="व्हील चेअर वाटप" loading="lazy">
+        <img src="ad3.jpeg" alt="व्हील चेअर वाटप" loading="lazy">
+
+      </div>
+
+      <div class="social-content">
+        <h3>दिव्यांग बांधवांना मोफत व्हील चेअर वाटप</h3>
+        <p>
+          गरजू बांधवांना मदतीचा हात.
+        </p>
+      </div>
+
+    </article>
+
+
+    <!-- Kabaddi -->
+
+    <article class="social-card wide">
+
+      <div class="activity-images">
+
+        <img src="cp.jpeg" alt="कबड्डी संघ" loading="lazy">
+        <img src="cp2.jpeg" alt="कबड्डी संघ" loading="lazy">
+        <img src="cp3.jpeg" alt="कबड्डी संघ" loading="lazy">
+        <img src="c4.jpeg" alt="कबड्डी संघ" loading="lazy">
+        <img src="cp5.jpeg" alt="कबड्डी संघ" loading="lazy">
+        <img src="cp6.jpeg" alt="कबड्डी संघ" loading="lazy">
+
+      </div>
+
+      <div class="social-content">
+        <h3>कबड्डी संघ</h3>
+        <p>
+          क्रीडा, संघभावना आणि जिद्द.
+        </p>
       </div>
 
     </article>
@@ -1070,20 +760,18 @@
 
   <div class="objective-highlight">
 
-    <div class="objective-top">
-      <span></span>
-      <b>प्रमुख उद्देश</b>
-      <span></span>
-    </div>
+    <p class="eyebrow">
+      आमचा संकल्प
+    </p>
 
     <h2>
-      चिंतामणीसाठी<br>
-      <strong>हायड्रॉलिक तराफा</strong>
+      प्रमुख उद्देश - चिंतामणीसाठी हायड्रॉलिक तराफा
     </h2>
 
     <p>
-      श्रद्धा, सेवा आणि सुरक्षित विसर्जनासाठी
-      चिंतामणी प्रतिष्ठानचा संकल्प.
+      चिंतामणी उत्सवाची परंपरा अधिक सुरक्षित,
+      आधुनिक आणि भव्य करण्यासाठी हायड्रॉलिक तराफा
+      उभारण्याचा आमचा प्रमुख संकल्प आहे.
     </p>
 
   </div>
@@ -1095,33 +783,122 @@
      SPONSORS
 ===================================================== -->
 
-<section
-  id="sponsors"
-  class="section sponsors"
->
+<section id="sponsors" class="section">
 
-  <div class="section-heading">
+  <p class="eyebrow">
+    सहकार्य
+  </p>
 
-    <p class="eyebrow">
-      सहकार्य
-    </p>
-
-    <h2>
-      आमचे प्रायोजक
-    </h2>
-
-  </div>
+  <h2>
+    आमचे प्रायोजक
+  </h2>
 
   <div class="sponsor-box">
 
-    <div class="sponsor-icon">
-      🤝
+    <p>
+      चिंतामणी प्रतिष्ठानच्या विविध सामाजिक आणि
+      सांस्कृतिक उपक्रमांसाठी सहकार्य करणाऱ्या
+      सर्वांचे मनःपूर्वक आभार.
+    </p>
+
+    <span>
+      प्रायोजकांची माहिती लवकरच येथे उपलब्ध होईल.
+    </span>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     INSTAGRAM
+===================================================== -->
+
+<section id="instagram" class="section instagram-section">
+
+  <div class="instagram-card">
+
+    <div class="instagram-logo">
+
+      <div class="instagram-logo-inner">
+
+        <div class="instagram-camera-dot"></div>
+
+      </div>
+
     </div>
 
-    <p>
-      प्रायोजकांचे लोगो आणि माहिती येथे
-      प्रदर्शित करता येईल.
-    </p>
+
+    <div class="instagram-content">
+
+      <p class="eyebrow">
+        सोशल मीडिया
+      </p>
+
+      <h2>
+        आम्हाला Instagram वर Follow करा
+      </h2>
+
+      <p>
+        चिंतामणी प्रतिष्ठानच्या सामाजिक उपक्रम,
+        गोविंदा पथकातील क्षण, कार्यक्रम आणि
+        नवीन अपडेट्स पाहण्यासाठी आमच्या Instagram
+        प्रोफाइलला भेट द्या.
+      </p>
+
+
+      <a
+        href="https://www.instagram.com/chintamanipratishtan?stkn=dmY4dWc1Nm1sOXJk"
+        class="instagram-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="चिंतामणी प्रतिष्ठान Instagram प्रोफाइल उघडा"
+      >
+
+        <span class="instagram-btn-icon">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <rect
+              x="3"
+              y="3"
+              width="18"
+              height="18"
+              rx="5"
+              ry="5"
+            ></rect>
+
+            <circle
+              cx="12"
+              cy="12"
+              r="4"
+            ></circle>
+
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="1.2"
+              class="instagram-dot"
+            ></circle>
+          </svg>
+        </span>
+
+        <span class="instagram-btn-text">
+          Follow us on Instagram
+        </span>
+
+        <strong>
+          @chintamanipratishtan
+        </strong>
+
+        <span class="instagram-arrow">
+          ↗
+        </span>
+
+      </a>
+
+    </div>
 
   </div>
 
@@ -1132,83 +909,61 @@
      CONTACT
 ===================================================== -->
 
-<section
-  id="contact"
-  class="section contact"
->
+<section id="contact" class="section contact dark">
 
-  <div class="section-heading">
+  <p class="eyebrow">
+    संपर्क
+  </p>
 
-    <p class="eyebrow">
-      संपर्क
-    </p>
-
-    <h2>
-      चिंतामणी प्रतिष्ठानशी संपर्क साधा
-    </h2>
-
-  </div>
-
+  <h2>
+    चिंतामणी प्रतिष्ठानशी संपर्क साधा
+  </h2>
 
   <div class="contact-grid">
 
     <div class="contact-card">
 
-      <div class="contact-icon">
-        📍
-      </div>
+      <span class="contact-icon">⌖</span>
 
-      <div>
-        <h3>
-          ठिकाण
-        </h3>
+      <h3>
+        पत्ता
+      </h3>
 
-        <p>
-          अ/११, अष्टविनायक इमारत,<br>
-          दत्ताराम लाड मार्ग,<br>
-          चिंचपोकळी मुंबई ४०००७०
-        </p>
-      </div>
+      <p>
+        अ/११, अष्टविनायक इमारत,<br>
+        दत्ताराम लाड मार्ग,<br>
+        चिंचपोकळी मुंबई ४०००७०
+      </p>
 
     </div>
 
 
     <div class="contact-card">
 
-      <div class="contact-icon">
-        ✉️
-      </div>
+      <span class="contact-icon">✉</span>
 
-      <div>
-        <h3>
-          ई-मेल
-        </h3>
+      <h3>
+        ई-मेल
+      </h3>
 
-        <p>
-          <a href="mailto:chintamaniprathisthan8@gmail.com">
-            chintamaniprathisthan8@gmail.com
-          </a>
-        </p>
-      </div>
+      <a href="mailto:chintamaniprathisthan8@gmail.com">
+        chintamaniprathisthan8@gmail.com
+      </a>
 
     </div>
 
 
     <div class="contact-card">
 
-      <div class="contact-icon">
-        📞
-      </div>
+      <span class="contact-icon">☎</span>
 
-      <div>
-        <h3>
-          मोबाईल
-        </h3>
+      <h3>
+        मोबाईल
+      </h3>
 
-        <p>
-          ७७१०९००४५०
-        </p>
-      </div>
+      <a href="tel:+917710900450">
+        ७७१०९००४५०
+      </a>
 
     </div>
 
@@ -1228,23 +983,27 @@
   <div class="footer-inner">
 
     <img
-      src="./logo.jpeg"
+      src="logo.jpeg"
       alt="चिंतामणी प्रतिष्ठान लोगो"
+      class="footer-logo"
     >
 
     <h3>
       चिंतामणी प्रतिष्ठान
     </h3>
 
-    <p class="footer-tagline">
-      एकता • शिस्त • परंपरा • जिद्द
-    </p>
-
     <p>
       चिंचपोकळी • स्थापना २०११
     </p>
 
-    <div class="footer-line"></div>
+    <a
+      href="https://www.instagram.com/chintamanipratishtan?stkn=dmY4dWc1Nm1sOXJk"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="footer-instagram"
+    >
+      Instagram • @chintamanipratishtan
+    </a>
 
     <p class="copyright">
       © २०२६ चिंतामणी प्रतिष्ठान. सर्व हक्क राखीव.
@@ -1261,39 +1020,49 @@
 
 <script>
 
-  const menu = document.querySelector('.menu');
-  const nav = document.querySelector('nav');
+  const menu = document.querySelector(".menu");
+  const nav = document.querySelector("#site-nav");
 
-  menu.addEventListener('click', () => {
+  menu.addEventListener("click", () => {
 
-    nav.classList.toggle('open');
-
-    const isOpen = nav.classList.contains('open');
+    const isOpen = nav.classList.toggle("open");
 
     menu.setAttribute(
-      'aria-expanded',
-      isOpen ? 'true' : 'false'
+      "aria-expanded",
+      isOpen ? "true" : "false"
     );
-
-    menu.textContent = isOpen ? '✕' : '☰';
 
   });
 
 
-  document.querySelectorAll('nav a').forEach((link) => {
+  document.querySelectorAll("#site-nav a").forEach((link) => {
 
-    link.addEventListener('click', () => {
+    link.addEventListener("click", () => {
 
-      nav.classList.remove('open');
+      nav.classList.remove("open");
 
       menu.setAttribute(
-        'aria-expanded',
-        'false'
+        "aria-expanded",
+        "false"
       );
 
-      menu.textContent = '☰';
-
     });
+
+  });
+
+
+  document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+
+      nav.classList.remove("open");
+
+      menu.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
 
   });
 
